@@ -9,7 +9,7 @@ nav img{max-width: 25%;}
 .bienvenue {text-align: center;
             margin-top: 175px;}
 .presentation {
-    position: relative;
+    position: relative; 
     background: #273E7C;
     overflow: hidden;
     height: 500px;
