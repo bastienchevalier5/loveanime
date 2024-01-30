@@ -21,7 +21,7 @@
             <div class="row align-items-start mx-auto p-1">
                 <div class="container-fluid">
                     <div class="col">
-                        <a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
+                        <a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -31,13 +31,13 @@
                               <div class="categorie">
                                 <ul class="navbar-nav">
                                 <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                                <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link active" href="anime.html">Animés</a>
+                                <a class="nav-link active" href="anime.php">Animés</a>
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link active" href="filmanimation.html">Films d'animation</a>
+                                <a class="nav-link active" href="filmanimation.php">Films d'animation</a>
                                 </li>
                                 </ul>
                               </div>
@@ -48,8 +48,8 @@
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                             </div>
-                            <a href="inscription.html" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
-                            <a href="connexion.html" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
+                            <a href="inscription.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
+                            <a href="connexion.php" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
                         </div>
                      </div>
                 </div>
@@ -70,14 +70,14 @@
         <h3 class="text-center text-black m-5">Animés</h3>
         <div id="carouselExampleAutoPlaying" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-              <a href="drstone.html"><img src="images/Dr.stone.jpg" class="d-block w-100 h-100" alt="dr stone" title="dr stone"></a>
+            <div class="carousel-item active" data-bs-interval="2000">
+              <a href="drstone.php"><img src="images/Dr.stone.jpg" class="d-block w-100 h-100" alt="dr stone" title="dr stone"></a>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <a href="tr.html"><img src="images/tr.jpg" class="d-block w-100 h-100" alt="tr" title="tr"></a>
+            <div class="carousel-item" data-bs-interval="2000">
+              <a href="tr.php"><img src="images/tr.jpg" class="d-block w-100 h-100" alt="tr" title="tr"></a>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <a href="ds.html"><img src="images/demon slayer.jpg" class="d-block w-100 h-100" alt="ds" title="ds"></a>
+            <div class="carousel-item" data-bs-interval="2000">
+              <a href="ds.php"><img src="images/demon slayer.jpg" class="d-block w-100 h-100" alt="ds" title="ds"></a>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -94,14 +94,14 @@
         <h3 class="text-center text-black m-5">Films d'animation</h3>
         <div id="carouselExampleAutoPlaying2" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-              <a href="yourname.html"><img src="images/yourname.jpg" class="d-block w-100 h-100" alt="your name" title="your name"></a>
+            <div class="carousel-item active" data-bs-interval="2000">
+              <a href="yourname.php"><img src="images/yourname.jpg" class="d-block w-100 h-100" alt="your name" title="your name"></a>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <a href="silentvoice.html"><img src="images/silentvoice.jpg" class="d-block w-100" alt="silentvoice" title="silentvoice"></a>
+            <div class="carousel-item" data-bs-interval="2000">
+              <a href="silentvoice.php"><img src="images/silentvoice.jpg" class="d-block w-100" alt="silentvoice" title="silentvoice"></a>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <a href="enfantdutemps.html"><img src="images/enfantdutemps.jpg" class="d-block w-100 h-100" alt="enfantdutemps" title="enfantdutemps"></a>
+            <div class="carousel-item" data-bs-interval="2000">
+              <a href="enfantdutemps.php"><img src="images/enfantdutemps.jpg" class="d-block w-100 h-100" alt="enfantdutemps" title="enfantdutemps"></a>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="prev">
@@ -120,7 +120,7 @@
   <footer>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="loveanime.html"><a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
+          <a class="navbar-brand" href="loveanime.php"><a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -128,16 +128,16 @@
             <div class="categorie">
               <ul class="navbar-nav fs-5">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                  <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="apropos.html">A propos</a>
+                  <a class="nav-link active" href="apropos.php">A propos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="#">Mentions légales</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="contact.html">Contactez-nous</a>
+                  <a class="nav-link active" href="contact.php">Contactez-nous</a>
                 </li>
               </ul>
             </div>

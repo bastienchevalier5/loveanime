@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Suzume</title>
+        <title>Je veux manger ton pancréas</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -27,7 +27,7 @@
                 <div class="row align-items-start mx-auto p-1">
                     <div class="container-fluid">
                         <div class="col">
-                            <a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
+                            <a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
@@ -37,13 +37,13 @@
                                   <div class="categorie">
                                     <ul class="navbar-nav">
                                     <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                                    <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link active" href="anime.html">Animés</a>
+                                    <a class="nav-link active" href="anime.php">Animés</a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link active" href="filmanimation.html">Films d'animation</a>
+                                    <a class="nav-link active" href="filmanimation.php">Films d'animation</a>
                                     </li>
                                     </ul>
                                   </div>
@@ -54,8 +54,8 @@
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                     </form>
                                 </div>
-                                <a href="inscription.html" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
-                                <a href="connexion.html" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
+                                <a href="inscription.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
+                                <a href="connexion.php" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
                             </div>
                          </div>
                     </div>
@@ -67,23 +67,23 @@
           <div class="card" style="background-color:#ebebeb">
             <div class="row g-0 w-100">
               <div class="col m-3">
-                <img src="images/suzume.png" class="img-fluid rounded-start h-100 ms-5" alt="suzume" title="suzume">
+                <img src="images/jvmtp.jpg" class="img-fluid rounded-start h-100 ms-5" alt="jvmtp" title="jvmtp">
               </div>
               <div class="col-md-8">
                     <div class="card-body text-start border m-5" style="background-color: #F6F6F6;">
-                        <h5 class="card-title">Suzume</h5>
-                        <div class="card-text">Titre original : すずめの戸締まり
-                                  </br>Durée : 2h01
-                                  </br>Réalisateur : Shinkai Makoto
-                                  </br>Genres : Action - Drame - Surnaturel
-                                  </br>Thèmes : Adolescence - Catastrophe naturelle - Malédiction - Séisme - Voyage
-                                  </br>Studio d'animation : CoMix Wave Films
-                                  </br>Disponible sur : <a href="https://www.canalplus.com/cinema/suzume/h/22965256_50001"><img src=images/canal+.png alt="canal+" title="canal+"></a></div>
+                        <h5 class="card-title">Je veux manger ton pancréas</h5>
+                        <div class="card-text">Titre original : 君の膵臓をたべたい
+                                  </br>Durée : 1h48
+                                  </br>Réalisateur : Ushijima Shinichiro
+                                  </br>Genres : Drame - Romance - School Life - Slice of Life
+                                  </br>Thèmes : Amitié - Ecole - Quotidien
+                                  </br>Studio d'animation : Studio VOLN
+                        </div>
                     </div>
                     <div class="card text-bg-light m-5">
                         <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>
                         <div class="card-body">
-                          <p class="card-text">Dans une petite ville paisible de Kyushu, une jeune fille de 17 ans, Suzume, rencontre un homme qui dit voyager afin de chercher une porte. Décidant de le suivre dans les montagnes, elle découvre une unique porte délabrée trônant au milieu des ruines, seul vestige ayant survécu au passage du temps. Cédant à une inexplicable impulsion, Suzume tourne la poignée, et d'autres portes s'ouvrent alors aux quatre coins du Japon, laissant entrer toutes les catastrophes qu'elles renferment.</p>
+                          <p class="card-text">Sakura est une lycéenne populaire et pleine de vie. Tout l’opposé d'un de ses camarades solitaires qui, tombant par mégarde sur son journal intime, découvre qu’elle n’a plus que quelques mois à vivre... Unis par ce secret, ils se rapprochent et s'apprivoisent. Sakura lui fait alors une proposition : vivre ensemble toute une vie en accéléré, le temps d’un printemps.</p>
                         </div>
                       </div>
                     </div>
@@ -94,29 +94,25 @@
                             <div class="container text-center">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <img style="height: 150px;" src="images/suzume2.webp" alt="suzume2" title="suzume2">
-                                        <p>Iwato Suzume</p>
+                                        <img style="height: 150px;" src="images/sakura2.jpg" alt="sakura2" title="sakura2">
+                                        <p>Yamauchi Sakura</p>
                                     </div>
                                     <div class="col">
-                                        <img style="height: 150px;" src="images/sota.png" alt="sota" title="sota">
-                                        <p>Munakata Sôta</p>
+                                        <img style="height: 150px;" src="images/haruki.jpg" alt="haruki" title="haruki">
+                                        <p>Shiga Haruki</p>
                                     </div>
                                     <div class="col">
-                                        <img style="height: 150px;" src="images/daijin.png" alt="daijin" title="daijin">
-                                        <p>Daijin</p>
+                                        <img style="height: 150px;" src="images/kyoko.jpg" alt="kyoko" title="kyoko">
+                                        <p>Takimoto Kyôko</p>
                                     </div>
                                     <div class="col">
-                                        <img style="height: 150px;" src="images/tomoya.jpg" alt="tomoya" title="tomoya">
-                                        <p>Serizawa Tomoya</p>
+                                        <img style="height: 150px;" src="images/takahiro.jpg" alt="takahiro" title="takahiro">
+                                        <p>Takahiro</p>
                                     </div>
                                     <div class="col">
-                                        <img style="height: 150px;" src="images/tamaki.jpg" alt="tamaki" title="tamaki">
-                                        <p>Iwato Tamaki</p>
+                                        <img style="height: 150px;" src="images/issei.jpg" alt="issei" title="issei">
+                                        <p>Miyata Issei</p>
                                     </div>
-                                    <div class="col">
-                                      <img style="height: 150px;" src="images/tsubame.jpg" alt="tsubame" title="tsubame">
-                                      <p>Iwato Tsubame</p>
-                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +124,7 @@
         <footer>
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="loveanime.html"><a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
+              <a class="navbar-brand" href="loveanime.php"><a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -136,16 +132,16 @@
                 <div class="categorie">
                   <ul class="navbar-nav fs-5">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                      <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="apropos.html">A propos</a>
+                      <a class="nav-link active" href="apropos.php">A propos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" href="#">Mentions légales</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="contact.html">Contactez-nous</a>
+                      <a class="nav-link active" href="contact.php">Contactez-nous</a>
                     </li>
                   </ul>
                 </div>
@@ -153,7 +149,6 @@
             </div>
           </nav>
         </footer>
-        <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

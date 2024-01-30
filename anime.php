@@ -21,7 +21,7 @@
           <div class="row align-items-start mx-auto p-1">
               <div class="container-fluid">
                   <div class="col">
-                      <a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
+                      <a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                       </button>
@@ -31,13 +31,13 @@
                             <div class="categorie">
                               <ul class="navbar-nav">
                               <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                              <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                               </li>
                               <li class="nav-item">
-                              <a class="nav-link active" href="anime.html">Animés</a>
+                              <a class="nav-link active" href="anime.php">Animés</a>
                               </li>
                               <li class="nav-item">
-                              <a class="nav-link active" href="filmanimation.html">Films d'animation</a>
+                              <a class="nav-link active" href="filmanimation.php">Films d'animation</a>
                               </li>
                               </ul>
                             </div>
@@ -48,8 +48,8 @@
                               <button class="btn btn-outline-success" type="submit">Search</button>
                               </form>
                           </div>
-                          <a href="inscription.html" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
-                          <a href="connexion.html" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
+                          <a href="inscription.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
+                          <a href="connexion.php" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
                       </div>
                    </div>
               </div>
@@ -60,21 +60,21 @@
   <main>
     <div class="card-group">
       <div class="card m-5">
-        <a href="drstone.html"><img src="images/Dr.stone.jpg" class="card-img-bottom h-100" alt="dr stone" title="dr stone">
+        <a href="drstone.php"><img src="images/Dr.stone.jpg" class="card-img-bottom h-100" alt="dr stone" title="dr stone">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Dr Stone</h5>
           <p class="card-text">Un jour, une lumière brillante apparaît subitement dans le ciel pétrifiant en une fraction de seconde l'humanité entière. Des millénaires plus tard, Taiju parvient à briser son enveloppe de pierre et découvre un monde où le genre humain a disparu de la surface de la terre. Avec son ami Senku, ils décident de récréer la civilisation à partir de zéro !</p>
         </a></div>
       </div>
       <div class="card m-5">
-       <a href="tr.html"><img src="images/tr.jpg" class="card-img-bottom h-100" alt="tr" title="tr">
+       <a href="tr.php"><img src="images/tr.jpg" class="card-img-bottom h-100" alt="tr" title="tr">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Tokyo Revengers</h5>
           <p class="card-text">Takemichi Hanagaki n'a pas vraiment réussi sa vie. Il fait des petits boulots sans intérêt et lorsqu'il apprend que la seule petite amie qu'il ait jamais eue au collège, Hinata Tachibana, a été tuée par l'impitoyable gang Tokyo Manji-kai, il est anéanti. Le lendemain, toujours sous le choc, il est poussé sur les rails de la gare lors d'un mouvement de foule. Mais Takemichi ne meurt pas et quand il se réveille, il est revenu douze ans en arrière.</p>
         </a></div>
       </div>
       <div class="card m-5">
-        <a href="ds.html"><img src="images/demon slayer.jpg" class="card-img-bottom h-100" alt="ds" title="ds">
+        <a href="ds.php"><img src="images/demon slayer.jpg" class="card-img-bottom h-100" alt="ds" title="ds">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Demon Slayer</h5>
           <p class="card-text">Pendant l’ère Taishô, Tanjiro, un jeune et sympathique vendeur de charbon, voit son quotidien changer radicalement après le massacre de sa famille par un démon. Seule sa petite sœur Nezuko survit à l’attaque, mais elle est transformée en un démon féroce. Ils partent tous deux en voyage afin de prendre leur revanche et de rendre à Nezuko son apparence d’origine.</p>
@@ -83,21 +83,21 @@
     </div>
     <div class="card-group">
       <div class="card m-5">
-        <a href="oshinoko.html"><img src="images/oshinoko.jpg" class="card-img-bottom h-100" alt="oshi no ko" title="oshi no ko">
+        <a href="oshinoko.php"><img src="images/oshinoko.jpg" class="card-img-bottom h-100" alt="oshi no ko" title="oshi no ko">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Oshi No Ko</h5>
           <p class="card-text">Le docteur Gorô est obstétricien dans un hôpital de campagne. Il est loin du monde de paillettes dans lequel évolue Ai Hoshino, une chanteuse au succès grandissant dont il est "un fan absolu". Ces deux-là vont peut-être se rencontrer dans des circonstances peu favorables, mais cet événement changera leur vie à jamais !</p>
         </a></div>
       </div>
       <div class="card m-5">
-        <a href="bc.html"><img src="images/black clover.jpg" class="card-img-bottom h-100" alt="bc" title="bc">
+        <a href="bc.php"><img src="images/black clover.jpg" class="card-img-bottom h-100" alt="bc" title="bc">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Black Clover</h5>
           <p class="card-text">Dans un monde régi par la magie, Yuno et Asta ont grandi ensemble avec un seul but en tête : devenir le prochain Empereur-Mage du royaume de Clover. Mais si le premier est naturellement doué, le deuxième, quant à lui, ne sait pas manipuler la magie. C'est ainsi que lors de la cérémonie d'attribution de leur grimoire, Yuno reçoit le légendaire grimoire au trèfle à quatre feuilles tandis qu'Asta, lui, repart bredouille. Or plus tard, un ancien et mystérieux ouvrage noir décoré d'un trèfle à cinq feuilles surgit devant lui ! Un grimoire d’anti-magie…</p>
         </a></div>
       </div>
       <div class="card m-5">
-        <a href="naruto.html"><img src="images/naruto.jpg" class="card-img-bottom h-100" alt="naruto" title="naruto">
+        <a href="naruto.php"><img src="images/naruto.jpg" class="card-img-bottom h-100" alt="naruto" title="naruto">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Naruto</h5>
           <p class="card-text">Il y a douze ans de cela, un terrible démon-renard dévastait le village de Konoha. Vaincu par les ninjas, l'esprit du démon fut scellé dans le corps d'un bébé : Naruto, qui a pour ambition de devenir un "Maître Hokage" afin d'être reconnu par ses pairs.
@@ -109,7 +109,7 @@
   <footer>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="loveanime.html"><a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
+        <a class="navbar-brand" href="loveanime.php"><a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -117,16 +117,16 @@
           <div class="categorie">
             <ul class="navbar-nav fs-5">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="apropos.html">A propos</a>
+                <a class="nav-link active" href="apropos.php">A propos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">Mentions légales</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="contact.html">Contactez-nous</a>
+                <a class="nav-link active" href="contact.php">Contactez-nous</a>
               </li>
             </ul>
           </div>

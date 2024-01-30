@@ -27,7 +27,7 @@
                 <div class="row align-items-start mx-auto p-1">
                     <div class="container-fluid">
                         <div class="col">
-                            <a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
+                            <a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
@@ -37,13 +37,13 @@
                                   <div class="categorie">
                                     <ul class="navbar-nav">
                                     <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                                    <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link active" href="anime.html">Animés</a>
+                                    <a class="nav-link active" href="anime.php">Animés</a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link active" href="filmanimation.html">Films d'animation</a>
+                                    <a class="nav-link active" href="filmanimation.php">Films d'animation</a>
                                     </li>
                                     </ul>
                                   </div>
@@ -54,8 +54,8 @@
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                     </form>
                                 </div>
-                                <a href="inscription.html" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
-                                <a href="connexion.html" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
+                                <a href="inscription.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Inscription</a>
+                                <a href="connexion.php" class="btn btn-secondary m-5" role="button" aria-disabled="true">Connexion</a>
                             </div>
                          </div>
                     </div>
@@ -1162,7 +1162,7 @@
         <footer>
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="loveanime.html"><a class="navbar-brand" href="loveanime.html"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
+              <a class="navbar-brand" href="loveanime.php"><a class="navbar-brand" href="loveanime.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -1170,16 +1170,16 @@
                 <div class="categorie">
                   <ul class="navbar-nav fs-5">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="loveanime.html">Accueil</a>
+                      <a class="nav-link active" aria-current="page" href="loveanime.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="apropos.html">A propos</a>
+                      <a class="nav-link active" href="apropos.php">A propos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" href="#">Mentions légales</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="contact.html">Contactez-nous</a>
+                      <a class="nav-link active" href="contact.php">Contactez-nous</a>
                     </li>
                   </ul>
                 </div>
