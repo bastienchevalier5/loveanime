@@ -1,10 +1,9 @@
-<header>
     <nav class="navbar navbar-expand-lg">
       <div class="container text-center">
           <div class="row align-items-start mx-auto p-1">
               <div class="container-fluid">
                   <div class="col">
-                      <a class="navbar-brand" href="index.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a>
+                      <a class="navbar-brand" href="index.php"><img src="images/loveanime.jpeg" alt="anime" title="anime"></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                       </button>
@@ -42,4 +41,3 @@
             </div>
       </div>
   </nav>
-  </header>

@@ -1,12 +1,11 @@
-<footer>
   <nav class="navbar navbar-expand-lg m-1">
-    <a class="navbar-brand" href="index.php"><a class="navbar-brand" href="index.php"><img src="images/loveanime.jpg" alt="anime" title="anime"></a></a>
+    <a class="navbar-brand" href="index.php"><a class="navbar-brand" href="index.php"><img src="images/loveanime.jpeg" alt="anime" title="anime"></a></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="container">
       <div class="elem">
-        <a href="#" class="button">Accueil</a>
+        <a href="index.php" class="button">Accueil</a>
       </div>
     </div>
     <div class="container">
@@ -25,4 +24,3 @@
       </div>
     </div>
   </nav>
-</footer>

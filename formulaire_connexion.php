@@ -23,9 +23,12 @@ include("bd.php");
     </head>
 
     <body>
-        <?php
-        include("header.php");
-        ?>
+        <header>
+            <?php
+            include("header.php");
+            ?> 
+        </header>
+        
         <main>
             <div class="inscription">
                 <form class="col g-3 m-5" action="mon_compte.php" method="post">
@@ -51,9 +54,11 @@ include("bd.php");
                 </form></div>
 
         </main>
-        <?php
-        include("footer.php");
-        ?>
+        <footer>
+            <?php
+            include("footer.php");
+            ?>
+        </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

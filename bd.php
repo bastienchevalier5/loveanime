@@ -1,6 +1,6 @@
 <?php
-$host = "127.0.0.1";
-$db = "compte_loveanime";
+$host = "192.168.1.27";
+$db = "loveanime";
 $user = "root";
 $pass = "";
 $port = 3306;

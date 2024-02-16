@@ -1,5 +1,14 @@
 <?php
 include("bd.php");
+if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {
+  $nom = $_POST['nom'];
+  $prenom = $_POST['prenom'];
+  $nom_utilisateur = $_POST['nom_utilisateur'];
+  $mail = $_POST['mail'];
+  $mdp = $_POST['mdp'];
+  $sql = 'INSERT INTO compte (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
+  $pdo->exec($sql);
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,13 +23,15 @@ include("bd.php");
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   
-  <link rel="stylesheet" media="all" type="text/css" href="css/loveanime.css">
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/loveanime.css">
 </head>
 
 <body>
-  <?php
-  include("header.php");
-  ?>
+  <header>
+    <?php
+    include("header.php");
+    ?>
+  </header>
   <main>
   <div class="presentation">
     <div class="bienvenue">
@@ -64,21 +75,12 @@ include("bd.php");
       </div>
     </div>
   </div>
-  <?php
-                if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['email']) and isset($_POST['mdp'])) {
-                    $nom = $_POST['nom'];
-                    $prenom = $_POST['prenom'];
-                    $nom_utilisateur = $_POST['nom_utilisateur'];
-                    $email = $_POST['email'];
-                    $mdp = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
-                    $sql = 'INSERT INTO compte (nom,prenom,nom_utilisateur,email,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$email.'","'.$mdp.'")';
-                    $pdo->exec($sql);
-                }
-                ?>
   </main>
-  <?php
-  include("footer.php");
-  ?>
+  <footer>
+    <?php
+    include("footer.php");
+    ?>
+  </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
