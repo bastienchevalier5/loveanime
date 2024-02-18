@@ -6,7 +6,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
   $nom_utilisateur = $_POST['nom_utilisateur'];
   $mail = $_POST['mail'];
   $mdp = $_POST['mdp'];
-  $sql = 'INSERT INTO compte (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
+  $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
   $pdo->exec($sql);
 }
 ?>
