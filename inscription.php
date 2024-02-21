@@ -1,5 +1,19 @@
 <?php
+session_start();
 include("bd.php");
+if (isset($_SESSION['connected'])) {
+    header("Location: moncompte.php");
+}
+if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $nom_utilisateur = $_POST['nom_utilisateur'];
+    $mail = $_POST['mail'];
+    $mdp = $_POST['mdp'];
+    $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
+    $pdo->exec($sql);
+  }
+  header('connexion.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,7 +44,7 @@ include("bd.php");
         </header>
         <main>
             <div class="inscription">
-                <form class="col g-3 m-5" action="index.php" method="post">
+                <form class="col g-3 m-5" action="" method="post">
                     <h2 class="m-3">Inscription</h2>
                     <div class="col-md-12 m-3">  
                         <label for="validationServer01" class="form-label">Nom</label>
@@ -73,6 +87,10 @@ include("bd.php");
                     </div>
                     <div class="col-12 m-3">
                     <button class="btn btn-primary" type="submit">S'inscrire</button>
+                    <?php if (isset($_POST['nom'], $_POST['prenom'], $_POST['nom_utilisateur'],$_POST['mail'],$_POST['mdp'])){
+                        echo "Inscription réussie !";
+                }
+                ?>
                     </div>
                 </form></div>
         </main>

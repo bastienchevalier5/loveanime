@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("bd.php");
+?>
 <!doctype html>
 <html lang="en">
 

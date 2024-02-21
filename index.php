@@ -1,14 +1,6 @@
 <?php
+session_start();
 include("bd.php");
-if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {
-  $nom = $_POST['nom'];
-  $prenom = $_POST['prenom'];
-  $nom_utilisateur = $_POST['nom_utilisateur'];
-  $mail = $_POST['mail'];
-  $mdp = $_POST['mdp'];
-  $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
-  $pdo->exec($sql);
-}
 ?>
 <!doctype html>
 <html lang="en">

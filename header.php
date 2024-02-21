@@ -28,13 +28,15 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                       </form>
                     </div>
-                          <?php
-                          if (isset($_SESSION['id_compte'])) {
-                            echo '<a href="mon_compte.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Mon Compte</a>';
-                          } else { 
-                            echo '<a href="inscription.php"><button class="btn-19"><span>Inscription</span></button></a>';
-                            echo '<a href="formulaire_connexion.php"><button class="btn-19"><span>Connexion</span></button></a>';                                }
-                                ?>
+                    <div class="btn_compte">
+                      <?php
+                      if (isset($_SESSION['connected']) && $_SESSION['connected'] = 1) {
+                      echo '<a href="moncompte.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Mon Compte</a>';
+                      } else {
+                      echo '<a href="inscription.php"><button class="btn-19"><span>Inscription</span></button></a>';
+                      echo '<a href="connexion.php"><button class="btn-19"><span>Connexion</span></button></a>';                                }
+                      ?>
+                    </div>
                   </div>
                 </div>
               </div>

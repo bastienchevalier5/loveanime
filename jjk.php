@@ -16,13 +16,15 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" media="all" type="text/css" href="CSS/loveanime.css">
+        <link rel="stylesheet" href="CSS/loveanime.css">
     </head>
 
     <body>
-        <?php
-        include("header.php");
-        ?>
+        <header>
+          <?php
+          include("header.php");
+          ?>
+        </header>
         <main>
         <div class="card" style="background-color:#ebebeb">
               <div class="row g-0 w-100">
@@ -405,9 +407,11 @@
                     </div>
                   </div>
         </main>
-        <?php
-        include("footer.php");
-        ?>
+        <footer>
+          <?php
+          include("footer.php");
+          ?>
+        </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

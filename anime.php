@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("bd.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -61,6 +65,30 @@
       </div>
       <div class="card m-5">
         <a href="naruto.php"><img src="images/naruto.jpg" class="card-img-bottom h-100" alt="naruto" title="naruto">
+        <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <h5 class="card-title">Naruto</h5>
+          <p class="card-text">Il y a douze ans de cela, un terrible démon-renard dévastait le village de Konoha. Vaincu par les ninjas, l'esprit du démon fut scellé dans le corps d'un bébé : Naruto, qui a pour ambition de devenir un "Maître Hokage" afin d'être reconnu par ses pairs.
+          </a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card m-5">
+        <a href="jjk.php"><img src="images/jjk.png" class="card-img-bottom h-100" alt="jjk" title="jjk">
+        <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <h5 class="card-title">Jujutsu kaisen</h5>
+          <p class="card-text">Plus de 10 000 morts et disparus sont recensés chaque année au Japon. Les sentiments négatifs que relâchent les êtres humains sont en cause. Souffrance, regrets, humiliation : leur concentration dans un même endroit engendre des malédictions souvent mortelles... C'est ce que va découvrir Yuji Itadori, lycéen et membre du club d'occultisme.</p>
+        </a></div>
+      </div>
+      <div class="card m-5">
+        <a href="nanatsu.php"><img src="images/nanatsu.jpg" class="card-img-bottom h-100" alt="bc" title="bc">
+        <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <h5 class="card-title">Nanatsu no taizai</h5>
+          <p class="card-text">Quand son royaume est renversé par des tyrans, une princesse écartée du trône cherche à se rapprocher d'une bande de chevaliers surpuissants pour récupérer son fief.</p>
+        </a></div>
+      </div>
+      <div class="card m-5">
+        <a href="naruto.php"><img src="images/nanatsu.jpg" class="card-img-bottom h-100" alt="naruto" title="naruto">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           <h5 class="card-title">Naruto</h5>
           <p class="card-text">Il y a douze ans de cela, un terrible démon-renard dévastait le village de Konoha. Vaincu par les ninjas, l'esprit du démon fut scellé dans le corps d'un bébé : Naruto, qui a pour ambition de devenir un "Maître Hokage" afin d'être reconnu par ses pairs.

@@ -1,5 +1,5 @@
 <?php
-$host = "192.168.1.27";
+$host = "127.0.0.1";
 $db = "loveanime";
 $user = "root";
 $pass = "";
@@ -8,4 +8,3 @@ $charset = "utf8mb4";
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port";
 $pdo = new PDO($dsn, $user, $pass);
-?>

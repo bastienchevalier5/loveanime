@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("bd.php");
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -20,9 +24,11 @@
     </head>
 
     <body>
-        <?php
-        include("header.php");
-        ?>
+        <header>
+          <?php
+          include("header.php");
+          ?>
+        </header>
         <main>
         <div class="card" style="background-color:#ebebeb">
               <div class="row g-0 w-100">
@@ -402,9 +408,11 @@
                     </div>
                   </div>
         </main>
-        <?php
-        include("footer.php");
-        ?>
+        <footer>
+          <?php
+          include("footer.php");
+          ?>
+        </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
