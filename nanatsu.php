@@ -252,7 +252,7 @@ include("bd.php");
                                 </tr>
                               </tbody>
                             </table>
-                            <table class="table table-bordered caption-top text-center"><h6>Saison 2</h6>
+                            <table class="table table-bordered caption-top text-center"><h6>Episodes spéciaux - Signs of Holy War</h6>
                               <thead>
                                 <tr>
                                   <th scope="col">N°</th>
@@ -264,141 +264,345 @@ include("bd.php");
                               <tbody>
                                 <tr>
                                   <th scope="row">1</th>
-                                  <td>Trésor caché</td>
-                                  <td>懐玉 / Kaigyoku</td>
-                                  <td>06/07/2023</td>
+                                  <td>Signs of Holy War - Le rêve noir débute</td>
+                                  <td>黒き夢のはじまり / Kuroki yume no hajimari</td>
+                                  <td>28/08/2016</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">2</th>
-                                  <td>Trésor caché (2)</td>
-                                  <td>懐玉－弐－ / Kaigyoku -Ni-</td>
-                                  <td>13/07/2023</td>
+                                  <td>Signs of Holy War - Notre foire du combat à tous les deux !</td>
+                                  <td>二人の喧嘩祭り / Futari no kenka matsuri</td>
+                                  <td>04/09/2016</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">3</th>
-                                  <td>Trésor caché (3)</td>
-                                  <td>懐玉－参－ / Kaigyoku -San-</td>
-                                  <td>20/07/2023</td>
+                                  <td>Signs of Holy War - À la recherche du premier amour !</td>
+                                  <td>初恋を追いかけて / Hatsukoi wo oikakete</td>
+                                  <td>11/09/2016</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">4</th>
-                                  <td>Trésor caché (4)</td>
-                                  <td>懐玉－肆－ / Kaigyoku -Shi-</td>
-                                  <td>27/07/2023</td>
+                                  <td>Signs of Holy War - Les formes de l’amour</td>
+                                  <td>愛のかたち / Ai no katachi</td>
+                                  <td>18/09/2016</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table class="table table-bordered caption-top text-center"><h6>Saison 2 - Revival of the Commandments</h6>
+                              <thead>
+                                <tr>
+                                  <th scope="col">N°</th>
+                                  <th scope="col">Titre français</th>
+                                  <th scope="col">Titre japonais</th>
+                                  <th scope="col">Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">0</th>
+                                  <td>Les Seven Deadly Sins - La renaissance des commandements - Prologue</td>
+                                  <td>七つの大罪 戒めの復活 -序章- / Nanatsu no Taizai Imashime no Fukkatsu -Joshō-</td>
+                                  <td>06/01/2018</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Le retour du clan des démons</td>
+                                  <td>魔神族復活 / Majin-zoku fukkatsu</td>
+                                  <td>13/01/2018</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Existence et preuve</td>
+                                  <td>存在と証明 / Sonzai to Shōmei</td>
+                                  <td>20/01/2018</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>Trésor sacré : Lostvayne</td>
+                                  <td>神器ロストヴェイン / Jingi Rosutovuein</td>
+                                  <td>27/01/2018</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td>Les Dix Commandements en mouvement</td>
+                                  <td>〈十戒〉始動 / "〈Jikkai〉Shidō"</td>
+                                  <td>03/02/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">5</th>
-                                  <td>Mort prématurée</td>
-                                  <td>玉折 / Gyokusetsu</td>
-                                  <td>03/08/2023</td>
+                                  <td>Violence Absolue</td>
+                                  <td>圧倒的暴力 / Attōteki Bōryoku</td>
+                                  <td>10/02/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">6</th>
-                                  <td>C'est bien ce que tu crois</td>
-                                  <td>そういうこと / Sō iu koto</td>
-                                  <td>31/08/2023</td>
+                                  <td>Le Grand Chevalier Sacré repenti</td>
+                                  <td>償いの聖騎士長 / Tsugunai no Seikishi-chō</td>
+                                  <td>17/02/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">7</th>
-                                  <td>La veille de la fête</td>
-                                  <td>宵祭り / Yoimatsuri</td>
-                                  <td>07/09/2023</td>
+                                  <td>Là où les souvenirs s'éveillent</td>
+                                  <td>記憶が目指す場所 / Kioku ga Mezasu Basho</td>
+                                  <td>24/02/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">8</th>
-                                  <td>Le drame de Shibuya</td>
-                                  <td>渋谷事変 / Shibuya jihen</td>
-                                  <td>15/09/2023</td>
+                                  <td>La Terre Sainte des Druides</td>
+                                  <td>ドルイドの聖地 / Doruido no Seichi</td>
+                                  <td>03/03/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">9</th>
-                                  <td>Le drame de Shibuya - Ouverture</td>
-                                  <td>渋谷事変 開門 / Shibuya jihen kaimon</td>
-                                  <td>22/09/2023</td>
+                                  <td>La Promesse Faite à Celle Que J’aime</td>
+                                  <td>愛する者との約束 / Ai suru Mono to no Yakusoku</td>
+                                  <td>10/03/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">10</th>
-                                  <td>Confusion</td>
-                                  <td>混乱 / Konran</td>
-                                  <td>29/09/2023</td>
+                                  <td>Ce qu'il nous manquent</td>
+                                  <td>僕 た ち に け の の の / Bokutachi ni Kaketa Mono</td>
+                                  <td>17/03/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">11</th>
-                                  <td>Invocation de l'âme</td>
-                                  <td>降霊 /Kōrei</td>
-                                  <td>06/10/2023</td>
+                                  <td>Père et fils</td>
+                                  <td>父親と息子 /Chichioya to Musuko</td>
+                                  <td>24/03/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">12</th>
-                                  <td>Lame émoussée</td>
-                                  <td>鈍刀 / Dontō</td>
-                                  <td>12/10/2023</td>
+                                  <td>Là, où se trouve l'amour</td>
+                                  <td>愛の在り処 / Ai no Arika</td>
+                                  <td>31/03/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">13</th>
-                                  <td>Les écailles rouges</td>
-                                  <td>赫鱗 / Sekirin</td>
-                                  <td>19/10/2023</td>
+                                  <td>Adieu, bandit de mon cœur</td>
+                                  <td>さらば愛しき盗賊 / Saraba Itoshiki Tōzoku</td>
+                                  <td>14/04/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">14</th>
-                                  <td>Oscillations (1)</td>
-                                  <td>揺蕩 / Youtou</td>
-                                  <td>26/10/2023</td>
+                                  <td>Le maître du Soleil</td>
+                                  <td>太陽の主 / Taiyō no Aruji</td>
+                                  <td>21/04/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">15</th>
-                                  <td>Oscillations (2)</td>
-                                  <td>揺蕩-弐- / Youtou -Ni-</td>
-                                  <td>02/11/2023</td>
+                                  <td>Le frisson de la déclaration</td>
+                                  <td>戦慄の告白 / Senritsu no Kokuhaku</td>
+                                  <td>28/04/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">16</th>
-                                  <td>Un coup de tonnerre (1)</td>
-                                  <td>雷鳴 / Raimei</td>
-                                  <td>09/11/2023</td>
+                                  <td>Le Labyrinthe du Piège Mortel</td>
+                                  <td>死の罠の迷宮 / Shi no Wana no Meikyū</td>
+                                  <td>05/05/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">17</th>
-                                  <td>Un coup de tonnerre (2)</td>
-                                  <td>雷鳴-弐- / Raimei -Ni-</td>
-                                  <td>16/11/2023</td>
+                                  <td>Ceux de la légende</td>
+                                  <td>伝承の者共 / Denshō no Monodomo</td>
+                                  <td>12/05/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">18</th>
-                                  <td>Le bien et le mal</td>
-                                  <td>理非 / Rihi</td>
-                                  <td>23/11/2023</td>
+                                  <td>Cette lumière pour le bien d'un autre</td>
+                                  <td>その光は誰が為に / Sono Hikari wa Ta ga tame ni</td>
+                                  <td>19/05/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">19</th>
-                                  <td>Le bien et le mal (2)</td>
-                                  <td>理非-弐- / Rihi -Ni-</td>
-                                  <td>30/11/2023</td>
+                                  <td>Meliodas vs Les Dix Commandements</td>
+                                  <td>メリオダスvs<十戒> / Meriodasu vs <Jikkai></td>
+                                  <td>26/05/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">20</th>
-                                  <td>Le bien et le mal (3)</td>
-                                  <td>理非-参- / Rihi -San-</td>
-                                  <td>07/12/2023</td>
+                                  <td>À la recherche de l’espoir</td>
+                                  <td>希望を求めて / Kibō wo Motomete</td>
+                                  <td>02/06/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">21</th>
-                                  <td>Métamorphose</td>
-                                  <td>変身 / Henshin</td>
-                                  <td>14/12/2023</td>
+                                  <td>Une chaleur certaine</td>
+                                  <td>たしかな ぬくもり / Tashika na Nukumori</td>
+                                  <td>09/06/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">22</th>
-                                  <td>Métamorphose (2)</td>
-                                  <td>変身-弐- / Henshin -Ni-</td>
-                                  <td>21/12/2023</td>
+                                  <td>Le retour du péché</td>
+                                  <td>〈罪〉の帰還 / Tsumi no Kikan</td>
+                                  <td>16/06/2018</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">23</th>
-                                  <td>Le drame de Shibuya - Fermeture</td>
-                                  <td>渋谷事変 閉門 / Shibuya jihen heimon</td>
-                                  <td>28/12/2023</td>
+                                  <td>Héros, debout !</td>
+                                  <td>英雄、立つ！ / Eiyū, Tatsu!</td>
+                                  <td>23/06/2018</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">24</th>
+                                  <td>Tant que tu es là</td>
+                                  <td>君がいるだけで / Kimi ga Iru Dake de</td>
+                                  <td>30/06/2018</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table class="table table-bordered caption-top text-center"><h6>Saison 3 - Wrath of the Gods</h6>
+                              <thead>
+                                <tr>
+                                  <th scope="col">N°</th>
+                                  <th scope="col">Titre français</th>
+                                  <th scope="col">Titre japonais</th>
+                                  <th scope="col">Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>La lumière qui chasse les ténèbres</td>
+                                  <td>闇を払う光 / Yami wo Harau Hikari</td>
+                                  <td>09/10/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Les souvenirs de la Guerre Sainte</td>
+                                  <td>聖戦の記憶 / Seisen no Kioku</td>
+                                  <td>16/10/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>Que la lumière soit</td>
+                                  <td>光あれ / Hikari Are</td>
+                                  <td>23/10/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td>Hurlement des bêtes sauvages</td>
+                                  <td>獣吼える / Yajū Hoeru</td>
+                                  <td>30/10/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td>Maelstrom de sentiments</td>
+                                  <td>感情メイルシュトローム / Kanjō Meirushutorōmu</td>
+                                  <td>06/11/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">6</th>
+                                  <td>C'est ce qu'on appelle l'amour</td>
+                                  <td>それをボクらは愛と呼ぶ / Sore wo Bokura wa Ai to Yobu</td>
+                                  <td>13/11/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">7</th>
+                                  <td>La Réunion des Sept Pêchés Capitaux</td>
+                                  <td>いざ、大罪集結へ！！ / Iza, Taizai Shūketsu e!!</td>
+                                  <td>20/11/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">8</th>
+                                  <td>La poupée recherche l'amour</td>
+                                  <td>人形は愛を乞う / Ningyō wa Ai wo Kou</td>
+                                  <td>27/11/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">9</th>
+                                  <td>Les amants maudits</td>
+                                  <td>呪われし恋人たち / Norowareshi Koibito-tachi</td>
+                                  <td>04/12/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">10</th>
+                                  <td>C'est notre mode de vie</td>
+                                  <td>それが僕らの生きる道  / Sore ga Bokura no Ikirumichi</td>
+                                  <td>11/12/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">11</th>
+                                  <td>L'odieux ne peut se reposer</td>
+                                  <td>怨念たちは眠らない / Onnen-tachi wa Nemuranai</td>
+                                  <td>18/12/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">12</th>
+                                  <td>Les jeunes filles puisent leur force dans l'amour</td>
+                                  <td>愛は乙女の力 / Ai wa Otome no Chikara</td>
+                                  <td>25/12/2019</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">13</th>
+                                  <td>Le tout-puissant contre le mal absolu</td>
+                                  <td>最強 vs. 最凶 / Saikyō vs. Saikyō</td>
+                                  <td>08/01/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">14</th>
+                                  <td>Une nouvelle menace</td>
+                                  <td>新たなる脅威/ Aratanaru Kyōi</td>
+                                  <td>15/01/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">15</th>
+                                  <td>Pour notre capitaine</td>
+                                  <td>団長へ / Danchō e</td>
+                                  <td>22/01/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">16</th>
+                                  <td>La dissolution des Sept Péchés Capitaux</td>
+                                  <td>七つの大罪〉終結 / Nanatsu no Taizai Shūketsu</td>
+                                  <td>29/01/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">17</th>
+                                  <td>Notre choix</td>
+                                  <td>ボクたちの選択 / Boku-tachi no Sentaku</td>
+                                  <td>05/02/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">18</th>
+                                  <td>La marche des saints</td>
+                                  <td>聖者の行進 / Seija no Kōshin</td>
+                                  <td>12/02/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">19</th>
+                                  <td>Le traité de la Guerre sainte</td>
+                                  <td>聖戦協定 / Seisen Kyōtei</td>
+                                  <td>19/02/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">20</th>
+                                  <td>L'enfant de l'espoir</td>
+                                  <td>希望の子 / Kibō no Ko</td>
+                                  <td>26/02/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">21</th>
+                                  <td>La colère impériale des dieux</td>
+                                  <td>聖戦の幕開け / Seisen no Makuake</td>
+                                  <td>04/03/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">22</th>
+                                  <td>Britannia en guerre</td>
+                                  <td>戦渦のブリタニア / Senka no Buritania</td>
+                                  <td>11/03/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">23</th>
+                                  <td>Se tordre dans les ténèbres</td>
+                                  <td>闇に歪む者 / Yami ni Yugamu Mono</td>
+                                  <td>18/03/2020</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">24</th>
+                                  <td>Amour effréné</td>
+                                  <td>暴走する愛 / Bōsō suru Ai</td>
+                                  <td>25/03/2020</td>
                                 </tr>
                               </tbody>
                             </table>

@@ -6,7 +6,7 @@ include("bd.php");
 <html lang="en">
 
 <head>
-  <title>Anime - Loveanime</title>
+  <title>Animes - Loveanime</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,12 +27,13 @@ include("bd.php");
   <main>
     <div class="card-group">
       <div class="card m-5">
-        <a href="drstone.php"><img src="images/Dr.stone.jpg" class="card-img-bottom h-100" alt="dr stone" title="dr stone">
+        <a href="drstone.php"><img src="images/Dr.stone.jpg" class="card-img-bottom h-100" alt="drstone" title="drstone">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-          <h5 class="card-title">Dr Stone</h5>
+          <h5 class="card-title">Dr stone</h5>
           <p class="card-text">Un jour, une lumière brillante apparaît subitement dans le ciel pétrifiant en une fraction de seconde l'humanité entière. Des millénaires plus tard, Taiju parvient à briser son enveloppe de pierre et découvre un monde où le genre humain a disparu de la surface de la terre. Avec son ami Senku, ils décident de récréer la civilisation à partir de zéro !</p>
         </a></div>
       </div>
+          
       <div class="card m-5">
        <a href="tr.php"><img src="images/tr.jpg" class="card-img-bottom h-100" alt="tr" title="tr">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">

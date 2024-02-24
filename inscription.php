@@ -9,11 +9,12 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
     $prenom = $_POST['prenom'];
     $nom_utilisateur = $_POST['nom_utilisateur'];
     $mail = $_POST['mail'];
-    $mdp = $_POST['mdp'];
+    $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
     $pdo->exec($sql);
+    header('Location: connexion.php');
   }
-  header('connexion.php');
+  
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,7 +45,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
         </header>
         <main>
             <div class="inscription">
-                <form class="col g-3 m-5" action="" method="post">
+                <form class="col g-3 m-5" action="inscription.php" method="post">
                     <h2 class="m-3">Inscription</h2>
                     <div class="col-md-12 m-3">  
                         <label for="validationServer01" class="form-label">Nom</label>
@@ -87,10 +88,6 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
                     </div>
                     <div class="col-12 m-3">
                     <button class="btn btn-primary" type="submit">S'inscrire</button>
-                    <?php if (isset($_POST['nom'], $_POST['prenom'], $_POST['nom_utilisateur'],$_POST['mail'],$_POST['mdp'])){
-                        echo "Inscription réussie !";
-                }
-                ?>
                     </div>
                 </form></div>
         </main>
