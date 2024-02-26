@@ -18,7 +18,7 @@ if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
         echo $resultats['nom_utilisateur'];
         echo $resultats['mdp'];
     }
-    if ($_POST['nom_utilisateur'] == $nom_utilisateur && password_verify($_POST['mdp'],$mdp)) {
+    if ($_POST['nom_utilisateur'] == $nom_utilisateur && $_POST['mdp'] == $mdp) {
         $_SESSION['connected'] = 1;
         $_SESSION['id_user'] = $id_user;
         $_SESSION['nom_utilisateur'] = $nom_utilisateur;

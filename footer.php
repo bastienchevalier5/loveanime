@@ -20,7 +20,7 @@
     </div>
     <div class="container">
       <div class="elem">
-        <a href="#" class="button">Mentions légales</a>
+        <a href="mention.php" class="button">Mentions légales</a>
       </div>
     </div>
   </nav>
