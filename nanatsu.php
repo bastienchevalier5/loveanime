@@ -606,6 +606,168 @@ include("bd.php");
                                 </tr>
                               </tbody>
                             </table>
+                            <table class="table table-bordered caption-top text-center"><h6>Saison 4 - Dragon's Judgement</h6>
+                              <thead>
+                                <tr>
+                                  <th scope="col">N°</th>
+                                  <th scope="col">Titre français</th>
+                                  <th scope="col">Titre japonais</th>
+                                  <th scope="col">Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">0</th>
+                                  <td>Emission spécial, excellent charmeur</td>
+                                  <td>魅力大放出スペシャル / Miryoku Dai Hōshutsu Supesharu</td>
+                                  <td>06/01/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Au purgatoire</td>
+                                  <td>煉獄より / Rengoku Yori</td>
+                                  <td>13/01/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Rencontre avec l’inconnu</td>
+                                  <td>未知との遭遇 / Michi to no Sōgū</td>
+                                  <td>20/01/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>Une seule pensée</td>
+                                  <td>一途なる想い / Ichizu Naru Omoi</td>
+                                  <td>27/01/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td>Rencontre impromptue</td>
+                                  <td>聖戦の犠牲者 / Seisen no Giseisha</td>
+                                  <td>03/02/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td>Le coup tragique</td>
+                                  <td>悲しき一撃 / Kanashiki Ichigeki</td>
+                                  <td>10/02/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">6</th>
+                                  <td>Confronter le désespoir</td>
+                                  <td>絶望に立ち向かえ / Zetsubō ni Tachimukae</td>
+                                  <td>17/02/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">7</th>
+                                  <td>Espoir, discorde et désespoir</td>
+                                  <td>希望と葛藤と絶望 / Kibō to Kattō to Zetsubō</td>
+                                  <td>24/02/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">8</th>
+                                  <td>Une porte vers l'espoir</td>
+                                  <td>希望への扉 / Kibō e no Tobira</td>
+                                  <td>03/03/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">9</th>
+                                  <td>Le grand rassemblement</td>
+                                  <td>集結するものたち / Shūketsu Suru Mono-tachi</td>
+                                  <td>10/03/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">10</th>
+                                  <td>Le Salut du Soleil</td>
+                                  <td>太陽の救済 / Taiyō no Kyūsai</td>
+                                  <td>17/03/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">11</th>
+                                  <td>Ceux qui s'opposent à un Dieu</td>
+                                  <td>神と対峙する人 / Kami to Taiji Suru Hito</td>
+                                  <td>24/03/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">12</th>
+                                  <td>Nous serons ta force</td>
+                                  <td>みんなキミの力になる / Minna Kimi no Chikara ni Naru</td>
+                                  <td>31/03/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">13</th>
+                                  <td>La fin d'un long voyage</td>
+                                  <td>永き旅の終着 / Nagaki Tabi no Shūchaku</td>
+                                  <td>07/04/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">14</th>
+                                  <td>Adieu, les Seven Deadly Sins</td>
+                                  <td>さよなら〈七つの大罪〉 / Sayonara〈Nanatsu no Taizai〉</td>
+                                  <td>14/04/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">15</th>
+                                  <td>Les frères du destin</td>
+                                  <td>宿命の兄弟 / Shukumei no Kyōdai</td>
+                                  <td>21/04/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">16</th>
+                                  <td>La dernière guerre</td>
+                                  <td>最終戦争 / Saishū Sensō</td>
+                                  <td>28/04/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">17</th>
+                                  <td>La voix qui t’appelle</td>
+                                  <td>キミの名を呼ぶ声 / Kimi no Na o Yobu koe</td>
+                                  <td>05/05/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">18</th>
+                                  <td>Le Roi chante seul</td>
+                                  <td>王は孤独に歌う / Ō wa Kodoku ni Utau</td>
+                                  <td>12/05/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">19</th>
+                                  <td>La lutte</td>
+                                  <td>あがき / Agaki</td>
+                                  <td>19/05/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">20</th>
+                                  <td>Ennemis mortels</td>
+                                  <td>倶に天を戴かず / Tomo ni Ten o Itadakazu</td>
+                                  <td>26/05/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">21</th>
+                                  <td>Les véritables intentions de la sorcière</td>
+                                  <td>魔女が求め続けたもの / Majo ga Motome Tsuzuketa Mono</td>
+                                  <td>02/06/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">22</th>
+                                  <td>Le fragment du chaos</td>
+                                  <td>混沌の一端 / Konton no Ittan</td>
+                                  <td>09/06/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">23</th>
+                                  <td>Un royaume éternel</td>
+                                  <td>永遠の王国 / Eien no Ōkoku</td>
+                                  <td>16/06/2021</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">24</th>
+                                  <td>Les héritiers</td>
+                                  <td>継がれゆくもの / Tsugare Yuku Mono</td>
+                                  <td>23/06/2021</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </p>
                         </div>
                       </div>

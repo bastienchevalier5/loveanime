@@ -256,4 +256,12 @@ footer img{width: 150px;
 .btn_compte{
   float: right;
 }
-             
+.body-mention{
+  text-align: center;
+}    
+.body-mention p{
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 50px;
+}
