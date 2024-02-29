@@ -74,6 +74,29 @@ include("bd.php");
                     </a></div>
                 </div>
             </div>
+            <div class="card-group">
+                <div class="card m-5">
+                   <a href="train_de_l'infini.php"><img src="images/train_de_l'infini.jpg" class="card-img-bottom h-100" alt="train de l'infini" title="train de l'infini">
+                    <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <h5 class="card-title">Demon Slayer, le film : Le Train de l'Infini</h5>
+                        <p class="card-text">Après avoir terminé leur rééducation et entraînement au domaine des papillons, Tanjirō, Nezuko, Zenitsu et Inosuke montent à bord du train de l'Infini afin de rencontrer le pilier de la Flamme, Kyōjurō Rengoku, et l'assister dans sa mission pour éliminer un démon ayant fait plus de 40 victimes. </p>
+                    </a></div>
+                </div>
+                <div class="card m-5">
+                   <a href="jujutsukaisen0.php"><img src="images/jujutsukaisen0.jpg" class="card-img-bottom h-100" alt="jujutsukaisen0" title="jujutsukaisen0">
+                    <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <h5 class="card-title">Jujutsu kaisen 0</h5>
+                        <p class="card-text">Yuta Okkotsu est hanté par l’esprit de Rika, son amie d’enfance morte dans un accident de la route. Cette dernière n’est plus la petite fille qu’il a connu et se manifeste sous la forme d’une entité monstrueuse qui le protège contre sa volonté. Après un énième accident causé par ce fléau, Yuta est récupéré par Satoru Gojo, professeur à l’école d’exorcisme de Tokyo, qui le convainc de rejoindre l’établissement pour maîtriser son énergie occulte.</p>
+                    </a></div>
+                </div>
+                <div class="card m-5">
+                   <a href="filmtensura.php"><img src="images/filmtensura.jpg" class="card-img-bottom h-100" alt="filmtensura" title="filmtensura">
+                    <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                        <h5 class="card-title">Moi, quand je me réincarne en Slime - Le Film : Scarlet Bond</h5>
+                        <p class="card-text">Il s’agit d’une histoire inédite par rapport aux romans originaux. L’histoire conduira Rimuru Tempest et ses compagnons au royaume de Raza.</p>
+                    </a></div>
+                </div>
+            </div>
         </main>
         <footer>
             <?php

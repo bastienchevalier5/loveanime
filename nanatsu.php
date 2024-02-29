@@ -5,7 +5,7 @@ include("bd.php");
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Nanatsu no Taizai</title>
+        <title>The seven deadly sins</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -37,7 +37,7 @@ include("bd.php");
                 </div>
                 <div class="col-md-8">
                   <div class="card-body text-start border m-5" style="background-color: #F6F6F6;">
-                    <h5 class="card-title">Nanatsu no Taizai</h5>
+                    <h5 class="card-title">The seven deadly sins</h5>
                     <div class="card-text">Titre original : 七つの大罪
                       </br>Saison 1 : 24 épisodes
                       </br>Spéciaux : 4 épisodes

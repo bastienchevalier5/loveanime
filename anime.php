@@ -84,15 +84,15 @@ include("bd.php");
       <div class="card m-5">
         <a href="nanatsu.php"><img src="images/nanatsu.jpg" class="card-img-bottom h-100" alt="bc" title="bc">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-          <h5 class="card-title">Nanatsu no taizai</h5>
+          <h5 class="card-title">The seven deadly sins</h5>
           <p class="card-text">Quand son royaume est renversé par des tyrans, une princesse écartée du trône cherche à se rapprocher d'une bande de chevaliers surpuissants pour récupérer son fief.</p>
         </a></div>
       </div>
       <div class="card m-5">
-        <a href="naruto.php"><img src="images/nanatsu.jpg" class="card-img-bottom h-100" alt="naruto" title="naruto">
+        <a href="tensura.php"><img src="images/tensura.jpg" class="card-img-bottom h-100" alt="tensura" title="tensura">
         <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-          <h5 class="card-title">Naruto</h5>
-          <p class="card-text">Il y a douze ans de cela, un terrible démon-renard dévastait le village de Konoha. Vaincu par les ninjas, l'esprit du démon fut scellé dans le corps d'un bébé : Naruto, qui a pour ambition de devenir un "Maître Hokage" afin d'être reconnu par ses pairs.
+          <h5 class="card-title">Moi, quand je me réincarne en slime</h5>
+          <p class="card-text">Satoru, employé de bureau lambda, se fait assassiner par un criminel en pleine rue. Son histoire aurait dû s’arrêter là, mais il se retrouve soudain réincarné dans un autre monde sous la forme d’un Slime, le monstre le plus faible du bestiaire fantastique. Le voilà équipé de deux compétences uniques : « Prédateur », lui permettant de récupérer les aptitudes de ses adversaires, et « Grand Sage », grâce à laquelle il acquiert une compréhension aiguë de son environnement. Mais même muni de ces armes, ses chances de survie semblent cependant limitées…
           </a></p>
         </div>
       </div>
