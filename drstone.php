@@ -47,7 +47,7 @@ include("bd.php");
                       </br>Genres : Action - Aventure - Drame - Fantastique - Science-fiction - Shônen
                       </br>Thèmes : Post-apocalyptique - Scientifique
                       </br>Studio d'animation : TMS Entertainment
-                      </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GYEXQKJG6/dr-stone"><img src="images/crunchyroll.png" alt="crunchyroll title="crunchyroll"></a></div>
+                      </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GYEXQKJG6/dr-stone"><img src="images/crunchyroll.png" alt="crunchyroll" title="crunchyroll"></a></div>
                     </div>
                     <div class="card text-bg-light m-5">
                       <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>

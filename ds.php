@@ -47,7 +47,7 @@ include("bd.php");
                                   </br>Genres : Action - Aventure - Drame - Fantastique - Historique - Nekketsu - Shônen - Surnaturel
                                   </br>Thèmes :  Démons - Famille
                                   </br>Studio d'animation : Ufotable
-                                  </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba"><img src=images/crunchyroll.png alt="crunchyroll title="crunchyroll"></a></div>
+                                  </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba"><img src=images/crunchyroll.png alt="crunchyroll" title="crunchyroll"></a></div>
                     </div>
                     <div class="card text-bg-light m-5">
                         <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>

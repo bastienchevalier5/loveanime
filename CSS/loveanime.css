@@ -39,7 +39,45 @@ footer img{width: 150px;
     background-size: cover;
 }
 .bienvenue h1,h3{color: white;}
-.card-img-bottom{height: 700px;}
+.card-animes{
+  display: flex;
+  flex-direction: row;
+  margin:25px;
+  transform: scale(0.8);
+  border-radius: 100px;
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: ;
+  --bs-card-subtitle-color: ;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  color: var(--bs-body-color);
+}
+.card-animes a{
+  color: black;
+  text-decoration: none;
+}
+.card-body{
+  background-color: white;
+}
+.card-text-animes{
+  font-size: x-large;
+  margin-top: 75px;
+}
+
 .card a{color: black;text-decoration: none;}
 .card-img-bottom:hover{opacity: 0.7;}
 .reseau{height: 50px;margin: 25px}

@@ -45,7 +45,7 @@ include("bd.php");
                     </br>Genres :  Drame - Psychologique - Slice of Life
                     </br>Thèmes :  Idols - Réincarnation / transmigration - Vengeance
                     </br>Studio d'animation : Doga Kobo
-                    </br>Disponible sur : <a href="https://animationdigitalnetwork.fr/video/oshi-no-ko"><img src=images/adn.jpg alt="adn title="adn"></a></div>
+                    </br>Disponible sur : <a href="https://animationdigitalnetwork.fr/video/oshi-no-ko"><img src=images/adn.jpg alt="adn" title="adn"></a></div>
                   </div>
                   <div class="card text-bg-light m-5">
                     <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>

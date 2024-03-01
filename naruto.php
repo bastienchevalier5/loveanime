@@ -44,7 +44,7 @@ include("bd.php");
                                   </br>Genres : Action - Aventure - Comédie - Drame - Fantasy - Nekketsu - Shônen - Surnaturel
                                   </br>Thème : Amitié - Arts martiaux - Ninjas - Tournois
                                   </br>Studio d'animation : Studio Pierrot
-                                  </br>Disponible sur : <a href="https://animationdigitalnetwork.fr/video/naruto"><img src="images/adn.jpg" alt="crunchyroll title="crunchyroll"></a></div>
+                                  </br>Disponible sur : <a href="https://animationdigitalnetwork.fr/video/naruto"><img src="images/adn.jpg" alt="crunchyroll" title="crunchyroll"></a></div>
                     </div>
                     <div class="card text-bg-light m-5">
                         <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>
