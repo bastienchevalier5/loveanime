@@ -43,7 +43,7 @@ footer img{width: 150px;
   display: flex;
   flex-direction: row;
   margin:25px;
-  transform: scale(0.8);
+  transform: scale(0.9);
   border-radius: 100px;
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -217,6 +217,7 @@ footer img{width: 150px;
                 -webkit-text-size-adjust: none;
                 text-size-adjust: none;
                 margin: 25px;
+                margin-right: 50px;
               }
               
               .btn-19:before {
@@ -302,4 +303,65 @@ footer img{width: 150px;
   margin: 0 auto;
   text-align: left;
   margin-top: 50px;
+}
+.form-control-recherche{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 200px;
+
+}
+.form-select{
+  width: 175px;
+}
+.card-btn{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: black solid 5px;
+  border-radius: 50px;
+  transform: scale(0.9);
+}
+.card-body-btn a{
+  margin-left: 10px;
+}
+
+.pagination{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a{
+  display:inline-block;
+	width:50px;
+  height: 50px;
+	padding:10px;
+	background-color:#89C9D3;
+	text-align:center;
+	text-decoration:none;
+  margin: 5px;
+  
+}
+
+.pagination a[href]{
+  background-color:#FFF;
+	color:black;
+}
+
+.pagination a[href]:hover{
+  background-color:#F8F8F8;
 }

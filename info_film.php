@@ -42,13 +42,13 @@ if (isset($_GET['id'])){
             <div class="row g-0 w-100">
                 <div class="col m-3">
                     <?php
-                    echo "<img style='width:300px' src=".$resultats['img_film']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
+                    echo "<img style='width:300px' src=".$resultats['img']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
                     ?>
                 </div>
                 <div class='col-md-8'>
                     <div class='card-body text-start border m-5' style=' margin-left:50px'>
                         <?php
-                        echo "<h5 class='card-title'>".$resultats['titre_film']."</h5>";
+                        echo "<h5 class='card-title'>".$resultats['titre']."</h5>";
                         echo "<p class='card-text'>Titre original :".$resultats['titre_original'];
                         echo "</br>Durée : ".$resultats['duree'];
                         echo "</br>Réalisateur : ".$resultats['realisateur'];

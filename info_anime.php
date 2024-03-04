@@ -6,6 +6,18 @@ if (isset($_GET['id'])){
     $sql = 'SELECT * FROM animes WHERE id='.$id;
     $temp = $pdo->query($sql);
     $resultats = $temp -> fetch();
+    $sql2 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_s1 WHERE id_anime='.$id.' ORDER BY episodes_s1.id';
+    $temp2 = $pdo->query($sql2);
+    $sql3 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_s2 WHERE id_anime='.$id.' ORDER BY episodes_s2.id';
+    $temp3 = $pdo->query($sql3);
+    $sql4 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_s3 WHERE id_anime='.$id.' ORDER BY episodes_s3.id';
+    $temp4 = $pdo->query($sql4);
+    $sql5 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_sans_saisons WHERE id_anime='.$id.' ORDER BY episodes_sans_saisons.id';
+    $temp5 = $pdo->query($sql5);
+    $sql6 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_speciaux WHERE id_anime='.$id.' ORDER BY episodes_speciaux.id';
+    $temp6 = $pdo->query($sql6);
+    $sql7 = 'SELECT *, DATE_FORMAT(diffusion, "%d/%m/%Y") AS date FROM episodes_s4 WHERE id_anime='.$id.' ORDER BY episodes_s4.id';
+    $temp7 = $pdo->query($sql7);
 }
 
 
@@ -13,7 +25,7 @@ if (isset($_GET['id'])){
 <!doctype html>
 <html lang="en">
     <head>
-        <title><?php echo $resultats['titre_anime']?></title>
+        <title><?php echo $resultats['titre']?></title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -42,13 +54,13 @@ if (isset($_GET['id'])){
             <div class="row g-0 w-100">
                 <div class="col m-3">
                     <?php
-                    echo "<img style='width:300px' src=".$resultats['img_anime']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
+                    echo "<img style='width:350px' src=".$resultats['img']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
                     ?>
                 </div>
                 <div class='col-md-8'>
-                    <div class='card-body text-start border m-5' style=' margin-left:50px'>
+                    <div class='card-body text-start border m-5'>
                         <?php
-                        echo "<h5 class='card-title'>".$resultats['titre_anime']."</h5>";
+                        echo "<h5 class='card-title'>".$resultats['titre']."</h5>";
                         echo "<p class='card-text'>Titre original :".$resultats['titre_original'];
                         echo "</br>Statut : ".$resultats['statut'];
                         echo "</br>Genres : ".$resultats['genres'];
@@ -99,6 +111,166 @@ if (isset($_GET['id'])){
                             </div>
                         </div>
                     </div>
+                    <div class="card text-bg-light mb-3">
+                        <div class="card-header text-white" style="background-color: #4F76BB;">Episodes</div>
+                        <div class="card-body" style="max-height: 300px;overflow-y: auto;">
+                          <p class="card-text">
+                          <?php
+                            if ($temp2->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'><h6>Saison 1</h6>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats2 = $temp2 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats2['numero']."</th>
+                                  <td>".$resultats2['titre_francais']."</td>
+                                  <td>".$resultats2['titre_japonais']."</td>
+                                  <td>".$resultats2['date']."</td>
+                                </tr>";
+                                }}
+                                ?>
+                              </tbody>
+                            </table>
+                            <?php
+                            if ($temp6->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'><h6>Episodes spéciaux</h6>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats6 = $temp6 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats6['numero']."</th>
+                                  <td>".$resultats6['titre_francais']."</td>
+                                  <td>".$resultats6['titre_japonais']."</td>
+                                  <td>".$resultats6['date']."</td>
+                                </tr>";
+                                }}
+                                ?>
+                              </tbody>
+                            </table>
+                            <?php
+                            if ($temp5->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats5 = $temp5 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats5['numero']."</th>
+                                  <td>".$resultats5['titre_francais']."</td>
+                                  <td>".$resultats5['titre_japonais']."</td>
+                                  <td>".$resultats5['date']."</td>
+                                </tr>";
+                                }}
+                                ?>
+                              </tbody>
+                            </table>
+                            <?php
+                            if ($temp3->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'><h6>Saison 2</h6>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats3 = $temp3 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats3['numero']."</th>
+                                  <td>".$resultats3['titre_francais']."</td>
+                                  <td>".$resultats3['titre_japonais']."</td>
+                                  <td>".$resultats3['date']."</td>
+                                </tr>";
+                                }
+                                echo "
+                              </tbody>
+                            </table>";
+                            }
+                            ?>
+                            <?php
+                            if ($temp4->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'><h6>Saison 3</h6>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats4 = $temp4 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats4['numero']."</th>
+                                  <td>".$resultats4['titre_francais']."</td>
+                                  <td>".$resultats4['titre_japonais']."</td>
+                                  <td>".$resultats4['date']."</td>
+                                </tr>";
+                                }
+                                echo "
+                              </tbody>
+                            </table>";
+                            }
+                            ?>
+                            <?php
+                            if ($temp7->rowCount() > 0) {
+                                echo "
+                            <table class='table table-bordered caption-top text-center'><h6>Saison 4</h6>
+                              <thead>
+                                <tr>
+                                  <th scope='col'>N°</th>
+                                  <th scope='col'>Titre français</th>
+                                  <th scope='col'>Titre japonais</th>
+                                  <th scope='col'>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+                                while ($resultats7 = $temp7 -> fetch()){
+                                echo "
+                                <tr>
+                                  <th scope='row'>".$resultats7['numero']."</th>
+                                  <td>".$resultats7['titre_francais']."</td>
+                                  <td>".$resultats7['titre_japonais']."</td>
+                                  <td>".$resultats7['date']."</td>
+                                </tr>";
+                                }
+                                echo "
+                              </tbody>
+                            </table>";
+                            }
+                            ?>
         </main>
         <footer>
             <?php

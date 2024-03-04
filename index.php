@@ -15,6 +15,8 @@ include("bd.php");
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
   
   <link rel="stylesheet" media="all" type="text/css" href="CSS/loveanime.css">
 </head>
@@ -42,22 +44,35 @@ include("bd.php");
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="filmanimation.php"><button class="custom-btn btn-5"><span>Films</span></button></a>
-                  </li>
+                  </li> 
                 </ul>
               </div>
               <div class="col">
-                <form class="d-flex mx-auto p-5" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                <form action="recherche.php" method="get" class="d-flex mx-auto p-5" role="search">
+                  <input name="Search" class="form-control-recherche ms-0 me-2" type="search" placeholder="Rechercher..." aria-label="Search">
+                  <select class="form-select me-2" name="categorie">
+                    <option value="titres_animes">Animés par titres</option>
+                    <option value="genres_animes">Animés par genres</option>
+                    <option value="titres_films">Films par titres</option>
+                    <option value="genres_films">Films par genres</option>
+                  </select>
+                  <button class="btn btn-outline-success" name="s" type="submit" value="rechercher">Rechercher</button>
                 </form>
               </div>
               <div class="btn_compte">
-                <?php
+              <?php
                 if (isset($_SESSION['connected']) && $_SESSION['connected'] = 1) {
                 echo '<a href="moncompte.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Mon Compte</a>';
                 } else {
-                echo '<a href="inscription.php"><button class="btn-19"><span>Inscription</span></button></a>';
-                echo '<a href="connexion.php"><button class="btn-19"><span>Connexion</span></button></a>';                                }
+                  echo "<div class='col mb-3 mb-sm-0'>
+                          <div class='card-btn'>
+                            <div class='card-body-btn'>
+                              <box-icon type='solid' name='user' size='lg'></box-icon><h4>Espace compte</h4>
+                              <a href='inscription.php'><button class='btn-19'><span>Inscription</span></button></a><a href='connexion.php'><button class='btn-19'><span>Connexion</span></button></a>
+                            </div>
+                          </div>
+                        </div>";
+                         }
                 ?>
               </div>
             </div>

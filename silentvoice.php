@@ -44,7 +44,7 @@ include("bd.php");
                                   </br>Genres : Drame - Psychologique - Romance - School Life - Slice of Life
                                   </br>Thèmes : Amitié - Amour - Ecole - Handicap - Harcèlement - Quotidien - Suicide
                                   </br>Studio d'animation : Kyoto Animation
-                                  </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GP5HJ84XV/a-silent-voice"><img src=images/crunchyroll.png alt="crunchyroll title="crunchyroll"></a></div>
+                                  </br>Disponible sur : <a href="https://www.crunchyroll.com/fr/series/GP5HJ84XV/a-silent-voice"><img src=images/crunchyroll.png alt="crunchyroll" title="crunchyroll"></a></div>
                     </div>
                     <div class="card text-bg-light m-5">
                         <div class="card-header text-white" style="background-color: #4F76BB;">Synopsis</div>
