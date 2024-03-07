@@ -1,166 +1,85 @@
-<?php
-session_start();
-include("bd.php");
-?>
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-  <title>Loveanime</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Toutes les informations sur les animes et films d'animations les plus populaires !">
-  
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-  
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/loveanime.css">
+  <title>Loveanime</title>
+  <!-- Inclure Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclure les bibliothèques nécessaires pour le carrousel -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <link rel="stylesheet" href="CSS/loveanime.css">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container text-center">
-        <div class="row align-items-start mx-auto p-1">
-          <div class="container-fluid">
-            <div class="col">
-              <a class="navbar-brand" href="index.php" alt="lienacceuil" title="lienacceuil"><img src="images/loveanime.jpeg" alt="anime" title="anime"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
-              <div class="col">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php"><button class="custom-btn btn-5"><span>Accueil</span></button></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="anime.php"><button class="custom-btn btn-5"><span>Animés</span></button></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="filmanimation.php"><button class="custom-btn btn-5"><span>Films</span></button></a>
-                  </li> 
-                </ul>
-              </div>
-              <div class="col">
-                <form action="recherche.php" method="get" class="d-flex mx-auto p-5" role="search">
-                  <input name="Search" class="form-control-recherche ms-0 me-2" type="search" placeholder="Rechercher..." aria-label="Search">
-                  <select class="form-select me-2" name="categorie">
-                    <option value="titres_animes">Animés par titres</option>
-                    <option value="genres_animes">Animés par genres</option>
-                    <option value="titres_films">Films par titres</option>
-                    <option value="genres_films">Films par genres</option>
-                  </select>
-                  <button class="btn btn-outline-success" name="s" type="submit" value="rechercher">Rechercher</button>
-                </form>
-              </div>
-              <div class="btn_compte">
-              <?php
-                if (isset($_SESSION['connected']) && $_SESSION['connected'] = 1) {
-                echo '<a href="moncompte.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Mon Compte</a>';
-                } else {
-                  echo "<div class='col mb-3 mb-sm-0'>
-                          <div class='card-btn'>
-                            <div class='card-body-btn'>
-                              <box-icon type='solid' name='user' size='lg'></box-icon><h4>Espace compte</h4>
-                              <a href='inscription.php'><button class='btn-19'><span>Inscription</span></button></a><a href='connexion.php'><button class='btn-19'><span>Connexion</span></button></a>
-                            </div>
-                          </div>
-                        </div>";
-                         }
-                ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <?php
+    session_start();
+    include("bd.php");
+    include "header.php";
+    ?>
   </header>
   <main>
-  <div class="presentation">
-    <div class="bienvenue">
-      <h1>Bienvenue sur Loveanime !</h1>
-      <h3>Toutes les infos sur vos animés et films d'animation préférés !</h3>
+    <div class="presentation">
+      <div class="bienvenue">
+        <h1>Bienvenue sur Loveanime !</h1>
+        <h2>Toutes les infos sur vos animés et films d'animation préférés !</h2>
+      </div>
     </div>
-  </div>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-6">
-        <h3 class="text-center text-black m-5">Animés</h3>
-        <div id="carouselExampleAutoPlaying" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-              <a href="drstone.php"><img src="images/Dr.stone.jpg" class="d-block w-100 h-100" alt="dr stone" title="dr stone"></a>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="text-center text-black m-5">Animés</h3>
+          <div id="carouselExampleAutoPlaying" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <?php
+              $sql = "SELECT * FROM animes ORDER BY id DESC LIMIT 5";
+              $temp = $pdo->query($sql);
+              $first = true;
+              while ($resultats = $temp->fetch()) {
+                $active_class = ($first) ? "active" : "";
+                echo '<div class="carousel-item ' . $active_class . '" data-bs-interval="2000">';
+                echo '<a href="info_anime.php?id=' . $resultats["id"] . '"><img src="' . $resultats["img"] . '" class="d-block w-100 h-100" alt="' . $resultats["titre"] . '" title="' . $resultats["titre"] . '"></a>';
+                echo '</div>';
+                $first = false;
+                }
+              
+              ?>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <a href="tr.php"><img src="images/tr.jpg" class="d-block w-100 h-100" alt="tokyorevengers" title="tokyorevengers"></a>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <a href="ds.php"><img src="images/demon slayer.jpg" class="d-block w-100 h-100" alt="demonslayer" title="demonslayer"></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-center text-black m-5">Films d'animation</h3>
+          <div id="carouselExampleAutoPlaying2" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <?php
+              $sql2 = "SELECT * FROM films ORDER BY id DESC LIMIT 5";
+              $temp2 = $pdo->query($sql2); 
+              $first = true;
+              while ($resultats2 = $temp2->fetch()) {
+                $active_class = ($first) ? "active" : "";
+                echo '<div class="carousel-item ' . $active_class . '" data-bs-interval="2000">';
+                echo '<a href="info_film.php?id=' . $resultats2["id"] . '"><img src="' . $resultats2["img"] . '" class="d-block w-100 h-100" alt="' . $resultats2["titre"] . '" title="' . $resultats2["titre"] . '"></a>';
+                echo '</div>';
+                $first = false;
+                }
+              ?>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <h3 class="text-center text-black m-5">Films d'animation</h3>
-        <div id="carouselExampleAutoPlaying2" class="carousel carousel slide w-50 mx-auto border border-white rounded-3 border-5" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-              <a href="yourname.php"><img src="images/yourname.jpg" class="d-block w-100 h-100" alt="yourname" title="yourname"></a>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <a href="silentvoice.php"><img src="images/silentvoice.jpg" class="d-block w-100" alt="silentvoice" title="silentvoice"></a>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <a href="enfantdutemps.php"><img src="images/enfantdutemps.jpg" class="d-block w-100 h-100" alt="enfantdutemps" title="enfantdutemps"></a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
   </main>
   <footer>
-    <nav class="navbar navbar-expand-lg m-1">
-      <a class="navbar-brand" href="index.php"><a class="navbar-brand" href="index.php"><img src="images/loveanime.jpeg" alt="anime" title="anime"></a></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container">
-        <div class="elem">
-          <a href="index.php" class="button">Accueil</a>
-        </div>
-      </div>
-      <div class="container">
-        <div class="elem">
-          <a href="apropos.php" class="button">A propos</a>
-        </div>
-      </div>
-      <div class="container">
-        <div class="elem">
-          <a href="contact.php" class="button">Contact</a>
-        </div>
-      </div>
-      <div class="container">
-        <div class="elem">
-          <a href="mention.php" class="button">Mentions légales</a>
-        </div>
-      </div>
-    </nav>
+    <?php
+    include "footer.php";
+    ?>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 
 </html>

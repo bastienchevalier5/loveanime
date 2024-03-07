@@ -1,14 +1,6 @@
 <?php
 include "bd.php";
 session_start();
-$sql2 = 'SELECT COUNT(id) AS cpt FROM animes';
-$temp2 = $pdo->query($sql2);
-$resultats2 = $temp2->fetchAll();
-@$page = $_GET['page'];
-if (empty($page)) $page=1;
-$nb_par_pages = 5;
-$nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
-$debut = ($page-1)*$nb_par_pages;
 $rowcount = 0;
 if (isset($_GET['s']) and isset($_GET['categorie'])) {
     $search = htmlspecialchars($_GET['Search']);
@@ -26,20 +18,55 @@ if (isset($_GET['s']) and isset($_GET['categorie'])) {
     $sql = "SELECT DISTINCT * FROM $table WHERE ";
     switch ($categorie) {
         case 'titres_animes':
+            $sql2 = "SELECT COUNT(id) AS cpt FROM animes WHERE titre LIKE '%" . $search . "%'";
+            $temp2 = $pdo->query($sql2);
+            $resultats2 = $temp2->fetchAll();
+            @$page = $_GET['page'];
+            if (empty($page)) $page=1;
+            $nb_par_pages = 5;
+            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
+            $debut = ($page-1)*$nb_par_pages;
             $sql .= "titre LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
             break;
         case 'genres_animes':
+            $sql2 = "SELECT COUNT(id) AS cpt FROM animes WHERE genres LIKE '%" . $search . "%'";
+            $temp2 = $pdo->query($sql2);
+            $resultats2 = $temp2->fetchAll();
+            @$page = $_GET['page'];
+            if (empty($page)) $page=1;
+            $nb_par_pages = 5;
+            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
+            $debut = ($page-1)*$nb_par_pages;
             $sql .= "genres LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
             break;
         case 'titres_films':
+            $sql2 = "SELECT COUNT(id) AS cpt FROM films WHERE titre LIKE '%" . $search . "%'";
+            $temp2 = $pdo->query($sql2);
+            $resultats2 = $temp2->fetchAll();
+            @$page = $_GET['page'];
+            if (empty($page)) $page=1;
+            $nb_par_pages = 5;
+            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
+            $debut = ($page-1)*$nb_par_pages;
             $sql .= "titre LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
             break;
         case 'genres_films':
+            $sql2 = "SELECT COUNT(id) AS cpt FROM films WHERE genres LIKE '%" . $search . "%'";
+            $temp2 = $pdo->query($sql2);
+            $resultats2 = $temp2->fetchAll();
+            @$page = $_GET['page'];
+            if (empty($page)) $page=1;
+            $nb_par_pages = 5;
+            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
+            $debut = ($page-1)*$nb_par_pages;
             $sql .= "genres LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
             break;
     }
     $temp = $pdo->query($sql);
     $rowcount = $temp->rowCount();
+    if ($nb_pages <= 1 && $rowcount == 0) {
+        $nb_pages = 0;
+    }
 }
 ?>
 
@@ -72,34 +99,32 @@ if (isset($_GET['s']) and isset($_GET['categorie'])) {
     </header>
     <main>
         <?php
-        if ($rowcount != 0){
-        while ($resultats = $temp -> fetch()){
-            echo "<div class='card-animes'>";
-            echo "<a href='info_anime.php?id=".$resultats['id']."'><img style='width: 350px;height: 500px' src='".$resultats['img']."' class='card-img-bottom' alt='anime' title='anime'>";
-            echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:500px;width:250px'>";
-            echo "<h2 class='card-title-animes'>".$resultats['titre']."</h2>";
-            echo "<p class='card-text-animes'>".$resultats['synopsis']."</p>";
-            echo '</a>';
-            echo '</div>';
-            echo '</div>';
-        }
-        
-        echo "<div class='pagination'>";
-        for ($i = 1; $i <= $nb_pages; $i++) {
-        // Ajouter les autres paramètres de recherche dans le lien de pagination
-        $params = $_GET;
-        $params['page'] = $i;
-        $query_string = http_build_query($params);
-    
-        if ($page != $i)
-            echo "<a href='?$query_string'>$i</a>&nbsp;";
-        else
-            echo "<a>$i</a>&nbsp;";
-}
-echo "</div>";
+        if ($rowcount > 0) {
+            while ($resultats = $temp->fetch()) {
+                echo "<div class='card-animes'>";
+                echo "<a href='info_anime.php?id=" . $resultats['id'] . "'><img style='width: 350px;height: 500px' src='" . $resultats['img'] . "' class='card-img-bottom' alt='anime' title='anime'>";
+                echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:500px;width:250px'>";
+                echo "<h2 class='card-title-animes'>" . $resultats['titre'] . "</h2>";
+                echo "<p class='card-text-animes'>" . $resultats['synopsis'] . "</p>";
+                echo '</a>';
+                echo '</div>';
+                echo '</div>';
+            }
 
-    }
-        else {
+                echo "<div class='pagination'>";
+                for ($i = 1; $i <= $nb_pages; $i++) {
+                    $params = $_GET;
+                    $params['page'] = $i;
+                    $query_string = http_build_query($params);
+
+                    if ($page != $i)
+                        echo "<a href='?$query_string'>$i</a>&nbsp;";
+                    else
+                        echo "<a>$i</a>&nbsp;";
+                }
+                echo "</div>";
+            
+        } elseif ($rowcount == 0) {
             echo "<h1 style='text-align:center;margin:50px'>Il n'y a aucun résultat pour cette recherche</br></br>Avez-vous utilisé le bon filtre ou mal écrit votre recherche?</h1>";
         }
         ?>

@@ -36,7 +36,7 @@
                 </form>
               </div>
                 <?php
-                if (isset($_SESSION['connected']) && $_SESSION['connected'] = 1) {
+                if (isset($_SESSION['connected'])) {
                 echo '<a href="moncompte.php" class="btn btn-primary ms-5" role="button" aria-disabled="true">Mon Compte</a>';
                 } else {
                   echo "<div class='col mb-3 mb-sm-0'>

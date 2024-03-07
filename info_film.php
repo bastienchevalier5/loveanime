@@ -13,7 +13,7 @@ if (isset($_GET['id'])){
 <!doctype html>
 <html lang="en">
     <head>
-        <title><?php echo $resultats['titre_film']?></title>
+        <title><?php echo $resultats['titre']?></title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -42,7 +42,7 @@ if (isset($_GET['id'])){
             <div class="row g-0 w-100">
                 <div class="col m-3">
                     <?php
-                    echo "<img style='width:300px' src=".$resultats['img']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
+                    echo "<img src=".$resultats['img']." class='img-fluid rounded-start h-100 ms-5' alt='image' title='image'>";
                     ?>
                 </div>
                 <div class='col-md-8'>

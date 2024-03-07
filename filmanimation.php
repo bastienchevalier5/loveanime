@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("bd.php");
-$sql2 = 'SELECT COUNT(id) AS cpt FROM animes';
+$sql2 = 'SELECT COUNT(id) AS cpt FROM films';
 $temp2 = $pdo->query($sql2);
 $resultats2 = $temp2->fetchAll();
 @$page = $_GET['page'];

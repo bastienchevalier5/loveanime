@@ -2,10 +2,10 @@
 session_start();
 include("bd.php");
 if (isset($_SESSION['connected'])) {
-    header("Location: moncompte.php");
+    header("Location: index.php");
 }
 if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
-    $sql = "SELECT * FROM comptes WHERE nom_utilisateur = " . "'" . $_POST['nom_utilisateur'] . "'" . " AND mdp =" . "'" . $_POST['mdp'] . "'" . " ORDER BY id";
+    $sql = "SELECT * FROM comptes";
     $temp = $pdo->query($sql);
     $nom_utilisateur = '';
     $mdp = '';
@@ -17,18 +17,15 @@ if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
         echo $resultats['id'];
         echo $resultats['nom_utilisateur'];
         echo $resultats['mdp'];
-    }
-    if ($_POST['nom_utilisateur'] == $nom_utilisateur && $_POST['mdp'] == $mdp) {
-        $_SESSION['connected'] = 1;
-        $_SESSION['id_user'] = $id_user;
-        $_SESSION['nom_utilisateur'] = $nom_utilisateur;
-        $_SESSION['mdp'] = $mdp;
-        echo 'session connected' . $_SESSION['connected'];
-        header("Location: moncompte.php");
-
-
-    } else {
-        $_SESSION['connected'] = 0;
+        if ($_POST['nom_utilisateur'] == $nom_utilisateur && password_verify($_POST['mdp'],$resultats['mdp'])) {
+            $_SESSION['connected'] = true;
+            $_SESSION['id_user'] = $id_user; // Set the id_user session variable
+            $_SESSION['nom_utilisateur'] = $nom_utilisateur;
+            $_SESSION['mdp'] = $mdp;
+            header("Location: index.php");
+        } else {
+            $_SESSION['connected'] = 0;
+            }   
     }
 }
 
@@ -62,7 +59,7 @@ if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
         </header>
         <main>
             <div class="inscription">
-                <form class="col g-3 m-5" action="" method="post">
+                <form class="col g-3 m-5" action="#" method="post">
                     <h2 class="m-3">Connexion</h2>
                     <?php
                     if (isset($_REQUEST['erreur']) && $_REQUEST['erreur'] == 1) {
