@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("bd.php");
-if (isset($_SESSION['connected'])) {
+if (isset($_SESSION['connected']) and $_SESSION['connected'] == 1) {
     header("Location: moncompte.php");
 }
 if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {

@@ -2,71 +2,21 @@
 include "bd.php";
 session_start();
 $rowcount = 0;
-if (isset($_GET['s']) and isset($_GET['categorie'])) {
+if (isset($_GET['s'])) {
     $search = htmlspecialchars($_GET['Search']);
-    $categorie = $_GET['categorie'];
-
     $search = trim($search);
     $search = strip_tags($search);
-
-    if ($categorie == 'titres_animes' || $categorie == 'genres_animes') {
-        $table = 'animes';
-    } elseif ($categorie == 'titres_films' || $categorie == 'genres_films') {
-        $table = 'films';
-    }
-
-    $sql = "SELECT DISTINCT * FROM $table WHERE ";
-    switch ($categorie) {
-        case 'titres_animes':
-            $sql2 = "SELECT COUNT(id) AS cpt FROM animes WHERE titre LIKE '%" . $search . "%'";
-            $temp2 = $pdo->query($sql2);
-            $resultats2 = $temp2->fetchAll();
-            @$page = $_GET['page'];
-            if (empty($page)) $page=1;
-            $nb_par_pages = 5;
-            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
-            $debut = ($page-1)*$nb_par_pages;
-            $sql .= "titre LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
-            break;
-        case 'genres_animes':
-            $sql2 = "SELECT COUNT(id) AS cpt FROM animes WHERE genres LIKE '%" . $search . "%'";
-            $temp2 = $pdo->query($sql2);
-            $resultats2 = $temp2->fetchAll();
-            @$page = $_GET['page'];
-            if (empty($page)) $page=1;
-            $nb_par_pages = 5;
-            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
-            $debut = ($page-1)*$nb_par_pages;
-            $sql .= "genres LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
-            break;
-        case 'titres_films':
-            $sql2 = "SELECT COUNT(id) AS cpt FROM films WHERE titre LIKE '%" . $search . "%'";
-            $temp2 = $pdo->query($sql2);
-            $resultats2 = $temp2->fetchAll();
-            @$page = $_GET['page'];
-            if (empty($page)) $page=1;
-            $nb_par_pages = 5;
-            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
-            $debut = ($page-1)*$nb_par_pages;
-            $sql .= "titre LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
-            break;
-        case 'genres_films':
-            $sql2 = "SELECT COUNT(id) AS cpt FROM films WHERE genres LIKE '%" . $search . "%'";
-            $temp2 = $pdo->query($sql2);
-            $resultats2 = $temp2->fetchAll();
-            @$page = $_GET['page'];
-            if (empty($page)) $page=1;
-            $nb_par_pages = 5;
-            $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
-            $debut = ($page-1)*$nb_par_pages;
-            $sql .= "genres LIKE '%" . $search . "%' LIMIT ".$debut.",".$nb_par_pages;
-            break;
-    }
+    $sql2 = 'SELECT COUNT(*) AS cpt FROM animes WHERE titre LIKE "%' . $search . '%" OR genres LIKE "%' . $search . '%"';
+    $temp2 = $pdo->query($sql2);
+    $resultats2 = $temp2->fetchAll();
+    @$page = $_GET['page'];
+    if (empty($page)) $page=1;
+    $nb_par_pages = 5;
+    $nb_pages = ceil($resultats2[0]["cpt"]/$nb_par_pages);
+    $debut = ($page-1)*$nb_par_pages;
+    $sql = 'SELECT DISTINCT * FROM animes WHERE titre LIKE "%'.$search.'%" OR genres LIKE "%' . $search . '%" ORDER BY titre LIMIT '.$debut.','.$nb_par_pages;
     $temp = $pdo->query($sql);
     $rowcount = $temp->rowCount();
-    if ($nb_pages <= 1 && $rowcount == 0) {
-        $nb_pages = 0;
-    }
 }
 ?>
 
@@ -111,7 +61,7 @@ if (isset($_GET['s']) and isset($_GET['categorie'])) {
                 echo '</div>';
             }
 
-                echo "<div class='pagination'>";
+            echo "<div class='pagination'>";
                 for ($i = 1; $i <= $nb_pages; $i++) {
                     $params = $_GET;
                     $params['page'] = $i;
