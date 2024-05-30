@@ -1,6 +1,29 @@
 <?php
 session_start();
 include "bd.php";
+
+$isFavori = false;
+$isInWatchlist = false;
+
+if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1 && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $utilisateur_id = $_SESSION['id_user'];
+
+    // Vérifier si l'anime est dans les favoris
+    $sqlFavori = 'SELECT * FROM favoris WHERE utilisateur_id = '.$utilisateur_id.' AND anime_id = '.$id;
+    $tempFavori = $pdo->query($sqlFavori);
+    if ($tempFavori->rowCount() > 0) {
+        $isFavori = true;
+    }
+
+    // Vérifier si l'anime est dans la watchlist
+    $sqlWatchlist = 'SELECT * FROM watchlist WHERE utilisateur_id = '.$utilisateur_id.' AND anime_id = '.$id;
+    $tempWatchlist = $pdo->query($sqlWatchlist);
+    if ($tempWatchlist->rowCount() > 0) {
+        $isInWatchlist = true;
+    }
+}
+
 if (isset($_GET['id'])){
     $id = $_GET['id'];
     $sql = 'SELECT * FROM animes WHERE id='.$id;
@@ -59,7 +82,7 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
   }
 }
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <title><?php echo $resultats['titre']?></title>
@@ -77,10 +100,10 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="CSS/loveanime.css">
+        <link rel="stylesheet" href="loveanime.css">
         <script src="https://kit.fontawesome.com/cb5071b44a.js" crossorigin="anonymous"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-      </head>
+    </head>
 
     <body>
         <header>
@@ -91,32 +114,38 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
         <main>
         <div class="card" style="background-color:#ebebeb">
             <div class="row g-0 w-100">
-                <div class="col m-3">
+                <div class="col m-3 d-flex">
                     <?php
-                    echo "<img style='width:350px' src=".$resultats['img']." class='img-fluid rounded-start m-5' alt='image' title='image'>";
+                    echo "<img src=".$resultats['img']." class='img-fluid rounded-start m-5' alt='image' title='image'>";
                     ?>
                 </div>
                 <div class='col-md-8'>
                     <div class='card-body text-start border m-5'>
                         <?php
                         echo "<h5 class='card-title'>".$resultats['titre']."</h5>";
-                        echo "<p class='card-text'>Titre original :".$resultats['titre_original'];
+                        echo "<p class='card-text'>Titre original : ".$resultats['titre_original'];
                         if ($resultats["type"] == "anime"){
-                          echo "</br>Statut : ".$resultats['statut'];
-
+                            echo "</br>Statut : ".$resultats['statut'];
                         }
                         echo "</br>Genres : ".$resultats['genres'];
                         echo "</br>Thèmes : ".$resultats['themes'];
                         echo "</br>Studio d'animation : ".$resultats['studio_animation'];
                         if ($resultats['streaming'] != ""){
-                          echo "</br>Disponible sur : ".$resultats['streaming'];
+                            echo "</br>Disponible sur   ".$resultats['streaming'];
                         }
-                        if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1){
+                        if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
                           echo "<div class='ajouts'>";
-                          echo "<button class='ajouter-favori' data-utilisateur-id='".$_SESSION['id_user']."' data-anime-id='".$id."'><i id='heart' class='fa-regular fa-heart red fa-xl'></i><p id='text-favori'>Ajouter à mes favoris</p></button>";
-                          echo "<button class='ajouter-watchlist' data-utilisateur-id='".$_SESSION['id_user']."' data-anime-id='".$id."'><i id='list' class='bx bx-md bx-list-plus'></i><p id='text-watchlist'>Ajouter à ma watchlist</p></button>";
+                      
+                          $heartClass = $isFavori ? "fa-solid fa-heart fa-xl" : "fa-regular fa-heart fa-xl";
+                          $favoriText = $isFavori ? "Retirer de mes favoris" : "Ajouter à mes favoris";
+                          echo "<button class='ajouter-favori' data-utilisateur-id='".$_SESSION['id_user']."' data-anime-id='".$id."'><i id='heart' class='$heartClass red'></i><p id='text-favori'>$favoriText</p></button>";
+                      
+                          $listClass = $isInWatchlist ? "bx bx-md bx-list-check" : "bx bx-md bx-list-plus";
+                          $watchlistText = $isInWatchlist ? "Retirer de ma watchlist" : "Ajouter à ma watchlist";
+                          echo "<button class='ajouter-watchlist' data-utilisateur-id='".$_SESSION['id_user']."' data-anime-id='".$id."'><i id='list' class='$listClass'></i><p id='text-watchlist'>$watchlistText</p></button>";
+                      
                           echo "</div>";
-                        }
+                      }
                         ?>
                     </div>
                     <div class="card text-bg-light m-5">
@@ -134,27 +163,27 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
                                 <div class="row align-items-center">
                                     <div class="col">
                                     <?php
-                                    echo "<img style='height: 150px;' src='".$resultats['img_perso1']."' alt='perso1' title='perso1'>
+                                    echo "<img style='height: 150px;' src='".$resultats['img_perso1']."' alt='".$resultats['nom_perso1']."' title='".$resultats['nom_perso1']."'>
                                     <p>".$resultats['nom_perso1']."</p>
                                     </div>
                                     <div class='col'>
-                                    <img style='height: 150px;' src='".$resultats['img_perso2']."' alt='perso2' title='perso2'>
+                                    <img style='height: 150px;' src='".$resultats['img_perso2']."' alt='".$resultats['nom_perso2']."' title='".$resultats['nom_perso2']."'>
                                     <p>".$resultats['nom_perso2']."</p>
                                     </div>
                                     <div class='col'>
-                                    <img style='height: 150px;' src='".$resultats['img_perso3']."' alt='perso3' title='perso3'>
+                                    <img style='height: 150px;' src='".$resultats['img_perso3']."' alt='".$resultats['nom_perso3']."' title='".$resultats['nom_perso3']."'>
                                     <p>".$resultats['nom_perso3']."</p>
                                     </div>
                                     <div class='col'>
-                                    <img style='height: 150px;' src='".$resultats['img_perso4']."' alt='perso4' title='perso4'>
+                                    <img style='height: 150px;' src='".$resultats['img_perso4']."' alt='".$resultats['nom_perso4']."' title='".$resultats['nom_perso4']."'>
                                     <p>".$resultats['nom_perso4']."</p>
                                     </div>
                                     <div class='col'>
-                                    <img style='height: 150px;' src='".$resultats['img_perso5']."' alt='perso5' title='perso5'>
+                                    <img style='height: 150px;' src='".$resultats['img_perso5']."' alt='".$resultats['nom_perso5']."' title='".$resultats['nom_perso5']."'>
                                     <p>".$resultats['nom_perso5']."</p>
                                     </div>
                                     <div class='col'>
-                                    <img style='height: 150px;' src='".$resultats['img_perso6']."' alt='perso6' title='perso6'>
+                                    <img style='height: 150px;' src='".$resultats['img_perso6']."' alt='".$resultats['nom_perso6']."' title='".$resultats['nom_perso6']."'>
                                     <p>".$resultats['nom_perso6']."</p>
                                     </div>";?>
                                 </div>
@@ -162,7 +191,7 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
                         </div>
                     </div>
                     <?php
-                    if ($resultats['type'] == "anime"){
+                    if ($resultats["type"] == "anime"){
                     echo '<div class="card text-bg-light mb-3">
                         <div class="card-header text-white" style="background-color: #4F76BB;">Episodes</div>
                         <div class="card-body" style="max-height: 300px;overflow-y: auto;">
@@ -321,7 +350,7 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
                               </tbody>
                             </table>";
                             }
-                          }
+                            }
                             ?>
         </main>
         <footer>
@@ -342,145 +371,81 @@ if (isset($_POST['anime_id_watchlist'],$_POST['utilisateur_id_watchlist'])) {
             crossorigin="anonymous"
         ></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-          $(document).ready(function() {
-            $(".ajouter-favori").click(function() {
-              var button = $(this); // Stocker la référence du bouton
-              var anime_id_favori = button.data("anime-id");
-              var user_id_favori = <?php echo $_SESSION['id_user']; ?>;
-              setCookie('favoris_' + user_id_favori + '_' + anime_id_favori, true, 30);
-              var data = {
-                  anime_id_favori: button.data("anime-id"), // Utiliser la variable button au lieu de $(this)
-                  utilisateur_id_favori: <?php echo $_SESSION['id_user']; ?>,
-              };
-              
-              $.ajax({
-                  type: "POST",
-                  url: "info_anime.php",
-                  data: data,
-                  success: function(response) {
-                      console.log(response);
-                      var anime_id_favori = data['anime_id_favori']; // Utiliser la clé correcte
-                      var user_id_favori = data['utilisateur_id_favori']; // Utiliser la clé correcte
-
-                      if (response === '{"message":"new"}') {
-                          updateFavoriIcon(true, button); // Passer le bouton à la fonction
-                          button.find("#text-favori").text('Retirer de mes favoris');
-                      } else if (response === '{"message":"supp"}') {
-                          updateFavoriIcon(false, button); // Passer le bouton à la fonction
-                          button.find("#text-favori").text('Ajouter à mes favoris');
+        <script>
+            $(document).ready(function() {
+              $(".ajouter-favori").click(function() {
+                  var button = $(this);
+                  var data = {
+                      anime_id_favori: button.data("anime-id"),
+                      utilisateur_id_favori: button.data("utilisateur-id")
+                  };
+                  
+                  $.ajax({
+                      type: "POST",
+                      url: "info_anime.php",
+                      data: data,
+                      success: function(response) {
+                          console.log(response);
+                          if (response === '{"message":"new"}') {
+                              updateFavoriIcon(true, button);
+                              button.find("#text-favori").text('Retirer de mes favoris');
+                          } else if (response === '{"message":"supp"}') {
+                              updateFavoriIcon(false, button);
+                              button.find("#text-favori").text('Ajouter à mes favoris');
+                          }
+                      },
+                      error: function(xhr, status, error) {
+                          console.error(error);
                       }
-                  },
-                  error: function(xhr, status, error) {
-                      console.error(error);
-                  }
+                  });
               });
-            });
 
-            $(".ajouter-favori").each(function() {
-              var button = $(this); // Stocker la référence du bouton
-              var anime_id_favori = button.data("anime-id");
-              var user_id_favori = <?php echo $_SESSION['id_user']; ?>;
-              var favoris = getCookie('favoris_' + user_id_favori + '_' + anime_id_favori);
-              if (favoris === 'true') {
-                  updateFavoriIcon(true, button); // Passer le bouton à la fonction
-                  button.find("#text-favori").text('Retirer de mes favoris');
+              function updateFavoriIcon(isFilled, button) {
+                  var icon = button.find("#heart");
+                  if (isFilled) {
+                      icon.removeClass("fa-regular fa-heart fa-xl").addClass("fa-solid fa-heart fa-xl");
+                  } else {
+                      icon.removeClass("fa-solid fa-heart fa-xl").addClass("fa-regular fa-heart fa-xl");
+                  }
               }
-            });
 
-            function updateFavoriIcon(isFilled, button) { // Ajouter le paramètre button
-              var icon = button.find("#heart"); // Utiliser le bouton pour trouver l'icône
-
-              if (isFilled) {
-                  icon.removeClass("fa-regular fa-heart fa-xl").addClass("fa-solid fa-heart fa-xl");
-              } else {
-                  icon.removeClass("fa-solid fa-heart fa-xl").addClass("fa-regular fa-heart fa-xl");
-              }
-            }
-            $(".ajouter-watchlist").click(function() {
-              var button = $(this); // Stocker la référence du bouton
-              var anime_id_watchlist = button.data("anime-id");
-              var user_id_watchlist = <?php echo $_SESSION['id_user']; ?>;
-              setCookie('watchlist_' + user_id_watchlist + '_' + anime_id_watchlist, true, 30);
-              var data = {
-                  anime_id_watchlist: button.data("anime-id"), // Utiliser la variable button au lieu de $(this)
-                  utilisateur_id_watchlist: <?php echo $_SESSION['id_user']; ?>,
-              };
-              
-              $.ajax({
-                  type: "POST",
-                  url: "info_anime.php",
-                  data: data,
-                  success: function(response) {
-                      console.log(response);
-                      var anime_id_watchlist = data['anime_id_watchlist']; // Utiliser la clé correcte
-                      var user_id_watchlist = data['utilisateur_id_watchlist']; // Utiliser la clé correcte
-
-                      if (response === '{"message":"new"}') {
-                          updateWatchlistIcon(true, button); // Passer le bouton à la fonction
-                          button.find("#text-watchlist").text('Retirer de ma watchlist');
-                          localStorage.setItem('watchlist_' + user_id_watchlist + '_' + anime_id_watchlist, true);
-                      } else if (response === '{"message":"supp"}') {
-                          updateWatchlistIcon(false, button); // Passer le bouton à la fonction
-                          button.find("#text-watchlist").text('Ajouter à ma watchlist');
-                          localStorage.removeItem('watchlist_' + user_id_watchlist + '_' + anime_id_watchlist);
+              $(".ajouter-watchlist").click(function() {
+                  var button = $(this);
+                  var data = {
+                      anime_id_watchlist: button.data("anime-id"),
+                      utilisateur_id_watchlist: button.data("utilisateur-id")
+                  };
+                  
+                  $.ajax({
+                      type: "POST",
+                      url: "info_anime.php",
+                      data: data,
+                      success: function(response) {
+                          console.log(response);
+                          if (response === '{"message":"new"}') {
+                              updateWatchlistIcon(true, button);
+                              button.find("#text-watchlist").text('Retirer de ma watchlist');
+                          } else if (response === '{"message":"supp"}') {
+                              updateWatchlistIcon(false, button);
+                              button.find("#text-watchlist").text('Ajouter à ma watchlist');
+                          }
+                      },
+                      error: function(xhr, status, error) {
+                          console.error(error);
                       }
-                  },
-                  error: function(xhr, status, error) {
-                      console.error(error);
-                  }
+                  });
               });
-            });
 
-            $(".ajouter-watchlist").each(function() {
-              var button = $(this); // Stocker la référence du bouton
-              var anime_id_watchlist = button.data("anime-id");
-              var user_id_watchlist = <?php echo $_SESSION['id_user']; ?>;
-              var watchlist = getCookie('watchlist_' + user_id_watchlist + '_' + anime_id_watchlist);
-              if (watchlist === 'true') {
-                  updateWatchlistIcon(true, button); // Passer le bouton à la fonction
-                  button.find("#text-watchlist").text('Retirer de ma watchlist');
-              }
-            });
-
-            function updateWatchlistIcon(isFilled, button) { // Ajouter le paramètre button
-              var icon = button.find("#list"); // Utiliser le bouton pour trouver l'icône
-
-              if (isFilled) {
-                  icon.removeClass("bx bx-md bx-list-plus").addClass("bx bx-md bx-list-check");
-              } else {
-                  icon.removeClass("bx bx-md bx-list-check").addClass("bx bx-md bx-list-plus");
-              }
-            }
-            function setCookie(name, value, days) {
-              var expires = "";
-              if (days) {
-                  var date = new Date();
-                  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                  expires = "; expires=" + date.toUTCString();
-              }
-              document.cookie = name + "=" + (value || "") + expires + "; path=/";
-            }
-            function getCookie(name) {
-              var nameEQ = name + "=";
-              var cookies = document.cookie.split(';');
-              for (var i = 0; i < cookies.length; i++) {
-                  var cookie = cookies[i];
-                  while (cookie.charAt(0) === ' ') {
-                      cookie = cookie.substring(1, cookie.length);
-                  }
-                  if (cookie.indexOf(nameEQ) === 0) {
-                      return cookie.substring(nameEQ.length, cookie.length);
+              function updateWatchlistIcon(isFilled, button) {
+                  var icon = button.find("#list");
+                  if (isFilled) {
+                      icon.removeClass("bx bx-md bx-list-plus").addClass("bx bx-md bx-list-check");
+                  } else {
+                      icon.removeClass("bx bx-md bx-list-check").addClass("bx bx-md bx-list-plus");
                   }
               }
-              return null;
-            }
-
-        });
-            
+          });
 
         </script>
-
-
     </body>
 </html>

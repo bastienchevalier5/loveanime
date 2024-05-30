@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("bd.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -16,7 +15,7 @@ include("bd.php");
   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="CSS/loveanime.css">
+  <link rel="stylesheet" href="loveanime.css">
 </head>
 
 <body>
@@ -40,7 +39,7 @@ include("bd.php");
           </div>
         </div></p>
       </div>
-      <div class="card mx-auto text-center w-50 mb-5">
+      <div class="card mx-auto text-center mb-5" id="card-social">
         <div class="card-header"><h2>Suivez-nous</h4></div>
           <div class="card-text m-5">
             <div class="social-icons">

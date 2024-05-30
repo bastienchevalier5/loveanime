@@ -38,7 +38,7 @@ if (isset($_GET['s'])) {
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="CSS/loveanime.css">
+    <link rel="stylesheet" href="loveanime.css">
 </head>
 
 <body>
@@ -52,8 +52,8 @@ if (isset($_GET['s'])) {
         if ($rowcount > 0) {
             while ($resultats = $temp->fetch()) {
                 echo "<div class='card-animes'>";
-                echo "<a href='info_anime.php?id=" . $resultats['id'] . "'><img style='width: 350px;height: 500px' src='" . $resultats['img'] . "' class='card-img-bottom' alt='anime' title='anime'>";
-                echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:500px;width:250px'>";
+                echo "<a href='info_anime?id=" . $resultats['id'] . "'><img style='height: 100%' src='" . $resultats['img'] . "' class='card-img-bottom' alt='anime' title='anime'>";
+                echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:25em'>";
                 echo "<h2 class='card-title-animes'>" . $resultats['titre'] . "</h2>";
                 echo "<p class='card-text-animes'>" . $resultats['synopsis'] . "</p>";
                 echo '</a>';
@@ -61,7 +61,7 @@ if (isset($_GET['s'])) {
                 echo '</div>';
             }
 
-            echo "<div class='pagination'>";
+                echo "<div class='pagination'>";
                 for ($i = 1; $i <= $nb_pages; $i++) {
                     $params = $_GET;
                     $params['page'] = $i;

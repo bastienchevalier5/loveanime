@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -16,7 +19,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="CSS/loveanime.css">
+        <link rel="stylesheet" href="loveanime.css">
     </head>
 
     <body>
@@ -31,16 +34,15 @@
                 <h1>Mentions légales</h1>
                 <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la
                    Confiance dans l’économie numérique, dite L.C.E.N., il est porté à la connaissance des utilisateurs et
-                   visiteurs, ci-après l""Utilisateur", du site http://localhost/loveanime/ , ci-après le "Site", les présentes
+                   visiteurs, ci-après l""Utilisateur", du site https://loveanime.rf.gd , ci-après le "Site", les présentes
                    mentions légales.
                 </p>
                 <p>La connexion et la navigation sur le Site par l’Utilisateur implique acceptation intégrale et sans
                    réserve des présentes mentions légales.
                 </p></br>
                 <h2>ARTICLE 1 - L'EDITEUR</h2>
-                <p>L’édition et la direction de la publication du Site est assurée par Chevalier Bastien, domiciliée 31
-                   impasse des charmilles 56130 Ferel, dont le numéro de téléphone est 0786478569, et l'adresse e-
-                   mail chevalierbastien770@gmail.com.
+                <p>L’édition et la direction de la publication du Site est assurée par Chevalier Bastien dont l'adresse e-
+                   mail est chevalierbastien770@gmail.com.
                 </p></br>
                 <h2>ARTICLE 2 - ACCES AU SITE</h2>
                 <p>Le Site est accessible en tout endroit, 7j/7, 24h/24 sauf cas de force majeure, interruption

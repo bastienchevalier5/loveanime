@@ -3,7 +3,7 @@ session_start();
 include("bd.php");
 if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
 } else {
-  header("Location: connexion.php");
+  header("Location: connexion");
 }
 $sql = 'SELECT nom, prenom, nom_utilisateur, mail FROM comptes WHERE id=' . $_SESSION['id_user'];
 $temp = $pdo->query($sql);
@@ -45,7 +45,7 @@ $temp4 = $pdo->query($sql4);
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="CSS/loveanime.css">
+        <link rel="stylesheet" href="loveanime.css">
     </head>
 
     <body>
@@ -102,37 +102,35 @@ $temp4 = $pdo->query($sql4);
                                 </div>
                             </form>
                             <div class="col-12 ms-4 text-center">
-                                <a href="delete.php?id=<?=$_SESSION['id_user']?>" onclick="alert('Voulez-vous vraiment supprimer ce compte?')" class="btn btn-danger text-center">Supprimer mon compte</a>
+                                <a href="delete_compte?id=<?=$_SESSION['id_user']?>" onclick="alert('Voulez-vous vraiment supprimer ce compte?')" class="btn btn-danger text-center">Supprimer mon compte</a>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                            <div>
+                            <div class="animes">
                                 <?php
-                                while ($resultats3 = $temp3->fetch()){
-                                    echo "<div class='card-animes'>";
-                                    echo "<a href='info_anime.php?id=".$resultats3['id']."'><img style='width: 350px;height: 500px' src='".$resultats3['img']."' class='card-img-bottom' alt='anime' title='anime'>";
-                                    echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:500px;width:250px'>";
-                                    echo "<h2 class='card-title-animes'>".$resultats3['titre']."</h2>";
-                                    echo "<p class='card-text-animes'>".$resultats3['synopsis']."</p>";
-                                    echo '</a>';
-                                    echo '</div>';
-                                    echo '</div>';
+                                while ($resultats3 = $temp3->fetch()) {
+                                echo "<div class='card-animes' style='flex-direction:column;align-items:normal'>";
+                                echo "<a href='info_anime.php?id=".$resultats3['id']."'><img style='width:22em' src='".$resultats3['img']."' alt='anime' title='anime'>";
+                                echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:7em;width:22em'>";
+                                echo "<h2 class='card-title-animes text-center'>".$resultats3['titre']."</h2>";
+                                echo '</a>';
+                                echo '</div>';
+                                echo '</div>';
                                 }
                                 ?>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-                            <div>
-                            <?php
-                                while ($resultats4 = $temp4->fetch()){
-                                    echo "<div class='card-animes'>";
-                                    echo "<a href='info_anime.php?id=".$resultats4['id']."'><img style='width: 350px;height: 500px' src='".$resultats4['img']."' class='card-img-bottom' alt='anime' title='anime'>";
-                                    echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:500px;width:250px'>";
-                                    echo "<h2 class='card-title-animes'>".$resultats4['titre']."</h2>";
-                                    echo "<p class='card-text-animes'>".$resultats4['synopsis']."</p>";
-                                    echo '</a>';
-                                    echo '</div>';
-                                    echo '</div>';
+                            <div class="animes">
+                                <?php
+                                while ($resultats4 = $temp4->fetch()) {
+                                echo "<div class='card-animes' style='flex-direction:column;align-items:normal'>";
+                                echo "<a href='info_anime.php?id=".$resultats4['id']."'><img style='width:22em' src='".$resultats4['img']."' alt='anime' title='anime'>";
+                                echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height:7em;width:22em'>";
+                                echo "<h2 class='card-title-animes text-center'>".$resultats4['titre']."</h2>";
+                                echo '</a>';
+                                echo '</div>';
+                                echo '</div>';
                                 }
                                 ?>
                             </div>
@@ -167,6 +165,5 @@ $temp4 = $pdo->query($sql4);
             $($(this).attr('data-bs-target')).removeClass('d-none'); // Afficher le contenu d'onglet correspondant
             });
         </script>
-
     </body>
 </html>

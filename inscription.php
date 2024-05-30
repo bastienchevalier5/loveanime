@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("bd.php");
-if (isset($_SESSION['connected']) and $_SESSION['connected'] == 1) {
-    header("Location: moncompte.php");
+if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
+    header("Location: moncompte");
 }
 if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {
     $nom = $_POST['nom'];
@@ -12,7 +12,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
     $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
     $pdo->exec($sql);
-    header('Location: connexion.php');
+    header('Location: connexion');
   }
   
 ?>
@@ -34,7 +34,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="CSS/loveanime.css">
+        <link rel="stylesheet" href="loveanime.css">
     </head>
 
     <body>
@@ -45,7 +45,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
         </header>
         <main>
             <div class="inscription">
-                <form class="col g-3 m-5" action="inscription.php" method="post">
+                <form class="col g-3 m-5" action="inscription" method="post">
                     <h2 class="m-3">Inscription</h2>
                     <div class="col-md-12 m-3">  
                         <label for="validationServer01" class="form-label">Nom</label>
@@ -86,8 +86,8 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
                         </div>
                         </div>
                     </div>
-                    <div class="col-12 m-3">
-                    <button class="btn btn-primary" type="submit">S'inscrire</button>
+                    <div class="col-12 m-3" style="display:flex;justify-content:center;width:initial">
+                    <button class="form-bouton" type="submit">S'inscrire</button>
                     </div>
                 </form></div>
         </main>
