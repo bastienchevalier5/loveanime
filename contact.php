@@ -17,7 +17,6 @@ require "phpmailer/src/PHPMailer.php";
 require "phpmailer/src/SMTP.php";
 
 if (isset($_POST['nom'], $_POST['email'], $_POST['message'])) {
-    // Récupérer les données du formulaire
     $nom = $_POST["nom"];
     $email = $_POST["email"];
     $message = $_POST["message"];
