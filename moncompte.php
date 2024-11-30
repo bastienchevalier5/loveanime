@@ -3,7 +3,7 @@ session_start();
 include("bd.php");
 if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
 } else {
-  header("Location: connexion");
+  header("Location: connexion.php");
 }
 $sql = 'SELECT nom, prenom, nom_utilisateur, mail FROM comptes WHERE id=' . $_SESSION['id_user'];
 $temp = $pdo->query($sql);
@@ -102,7 +102,7 @@ $temp4 = $pdo->query($sql4);
                                 </div>
                             </form>
                             <div class="col-12 ms-4 text-center">
-                                <a href="delete_compte?id=<?=$_SESSION['id_user']?>" onclick="alert('Voulez-vous vraiment supprimer ce compte?')" class="btn btn-danger text-center">Supprimer mon compte</a>
+                                <a href="delete_compte.php?id=<?=$_SESSION['id_user']?>" onclick="alert('Voulez-vous vraiment supprimer ce compte?')" class="btn btn-danger text-center">Supprimer mon compte</a>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">

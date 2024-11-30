@@ -2,7 +2,7 @@
 session_start();
 include("bd.php");
 if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
-    header("Location: index");
+    header("Location: index.php");
 }
 if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
     $nom_utilisateur = $_POST['nom_utilisateur'];
@@ -18,10 +18,10 @@ if (isset($_POST['nom_utilisateur'], $_POST['mdp'])) {
         $_SESSION['id_user'] = $user['id'];
         $_SESSION['nom_utilisateur'] = $user['nom_utilisateur'];
         $_SESSION['mdp'] = $user['mdp'];
-        header("Location: moncompte");
+        header("Location: moncompte.php");
     } else {
         $_SESSION['connected'] = 0;
-        header("Location: connexion?erreur=1");
+        header("Location: connexion.php?erreur=1");
     }
 }
 

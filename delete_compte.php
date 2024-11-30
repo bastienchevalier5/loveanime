@@ -22,7 +22,7 @@ if (isset($_GET['id'])){
 
     session_destroy();
 
-    header("Location: index");
+    header("Location: index.php");
 
 }
 

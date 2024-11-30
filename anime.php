@@ -29,7 +29,7 @@
   <?php
     while ($resultats = $temp->fetch()) {
       echo "<div class='card-animes'>";
-      echo "<a href='info_anime?id=".$resultats['id']."'><img src='".$resultats['img']."' class='card-img-bottom' alt='anime' title='anime'>";
+      echo "<a href='info_anime.php?id=".$resultats['id']."'><img src='".$resultats['img']."' class='card-img-bottom' alt='anime' title='anime'>";
       echo "<div class='card-body'>";
       echo "<h2 class='card-title-animes'>".$resultats['titre']."</h2>";
       echo "<p class='card-text-animes'>".$resultats['synopsis']."</p>";

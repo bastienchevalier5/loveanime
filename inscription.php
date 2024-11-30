@@ -2,7 +2,7 @@
 session_start();
 include("bd.php");
 if (isset($_SESSION['connected']) && $_SESSION['connected'] == 1) {
-    header("Location: moncompte");
+    header("Location: moncompte.php");
 }
 if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utilisateur']) and isset($_POST['mail']) and isset($_POST['mdp'])) {
     $nom = $_POST['nom'];
@@ -12,7 +12,7 @@ if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nom_utili
     $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $sql = 'INSERT INTO comptes (nom,prenom,nom_utilisateur,mail,mdp) VALUES ("'.$nom.'","'.$prenom.'","'.$nom_utilisateur.'","'.$mail.'","'.$mdp.'")';
     $pdo->exec($sql);
-    header('Location: connexion');
+    header('Location: connexion.php');
   }
   
 ?>

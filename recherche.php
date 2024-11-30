@@ -52,7 +52,7 @@ if (isset($_GET['s'])) {
         if ($rowcount > 0) {
             while ($resultats = $temp->fetch()) {
                 echo "<div class='card-animes'>";
-                echo "<a href='info_anime?id=" . $resultats['id'] . "'><img style='height: 100%' src='" . $resultats['img'] . "' class='card-img-bottom' alt='anime' title='anime'>";
+                echo "<a href='info_anime.php?id=" . $resultats['id'] . "'><img style='height: 100%' src='" . $resultats['img'] . "' class='card-img-bottom' alt='anime' title='anime'>";
                 echo "<div class='card-body' style='box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:25em'>";
                 echo "<h2 class='card-title-animes'>" . $resultats['titre'] . "</h2>";
                 echo "<p class='card-text-animes'>" . $resultats['synopsis'] . "</p>";
