@@ -4,7 +4,7 @@
         <div class="row align-items-start mx-auto p-1 text-center">
           <div class="container-fluid text-center">
             <div class="col text-center">
-              <a class="navbar-brand" href="index.php" alt="lienacceuil" title="lienacceuil"><img src="loveanime.jpg" alt="anime" title="anime"></a>
+              <a class="navbar-brand" href="index.php" alt="lienacceuil" title="lienacceuil"><img src="img/loveanime.jpg" alt="anime" title="anime"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="margin:15px">Menu</span><span class="navbar-toggler-icon"></span>
               </button>

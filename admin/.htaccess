@@ -1,0 +1,8 @@
+# BEGIN InfinityFree Directory Protection
+# DO NOT EDIT - YOUR CHANGES WILL BE OVERWRITTEN
+AuthType Basic
+AuthName "Login Required"
+AuthUserFile "/home/vol1_8/infinityfree.com/if0_36001491/htdocs/admin/.htpasswd"
+Require valid-user
+Options +Indexes
+# END InfinityFree Directory Protection

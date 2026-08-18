@@ -1,5 +1,5 @@
   <nav class="navbar navbar-expand-lg m-1">
-    <a class="navbar-brand" href="index.php"><img src="loveanime.jpg" alt="anime" title="anime"></a>
+    <a class="navbar-brand" href="index.php"><img src="img/loveanime.jpg" alt="anime" title="anime"></a>
     <div class="container">
       <div class="elem">
         <a href="index.php" class="button">Accueil</a>

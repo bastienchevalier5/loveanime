@@ -1,0 +1,25 @@
+php_value display_errors On
+php_value mbstring.http_input auto
+php_value date.timezone Europe/Paris
+# Turn on Rewrite Engine
+RewriteEngine On
+# Force https:// Prefix
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+# Remove www. Prefix
+RewriteCond %{HTTP_HOST} ^www.
+RewriteCond %{HTTPS}s ^on(s)|off
+RewriteCond http%1://%{HTTP_HOST} ^(https?://)(www.)?(.+)$
+RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
+# Masquer les extensions .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-zA-Z0-9éèàùçÉÈÀÙÇ_-]+)$ $1.php [L]
+
+RewriteRule ^screenshot/([0-9]+)$ screenshot-game.php?rounds=$1 [L,QSA]
+RewriteRule ^character/([0-9]+)$ character-game.php?rounds=$1 [L,QSA]
+RewriteRule ^opening/([0-9]+)$ opening-game.php?rounds=$1 [L,QSA]
+RewriteRule ^anidle/([0-9]+)$ anidle-game.php?rounds=$1 [L,QSA]
